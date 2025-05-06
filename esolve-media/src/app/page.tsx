@@ -1,20 +1,13 @@
-import Banner from "@/components/banner";
-import Navbar from "@/components/navbar";
+import AboutUs from "@/components/AboutUs";
+import Banner from "@/components/Banner";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
     <main>
       <Navbar />
       <Banner />
-
-      {/* Additional sections would go here */}
-      <section className="min-h-screen bg-gray-100 p-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8">Our Services</h2>
-          {/* Content for the next section */}
-          <div className="h-[800px]"></div>
-        </div>
-      </section>
+      <AboutUs />
     </main>
   );
 }
