@@ -1,8 +1,8 @@
-import SectionContainer from "@/components/SectionContainer";
+import PricingCard from "./PackageCard";
+import PricingGrid from "./PricingGrid";
+import SectionContainer from "./SectionContainer";
 import SectionHeader from "./ui/SectionHeader";
-import WhatWeOffer from "@/components/WhatWeOffer";
-import PricingGrid from "@/components/PricingGrid";
-import PricingCard from "@/components/PackageCard";
+import WhatWeOffer from "./WhatWeOffer";
 
 export default function MarketingForBusinesses() {
   const businessData = {

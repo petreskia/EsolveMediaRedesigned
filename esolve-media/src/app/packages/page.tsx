@@ -1,3 +1,3 @@
 export default function PackagesPage() {
-  return <div>Packages Page</div>;
+  return <div>PackagesPage</div>;
 }
