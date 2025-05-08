@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import SectionContainer from "@/components/section-container";
-import WhatWeOffer from "@/components/what-we-offer";
-import ToggleButton from "@/components/toggle-button";
-import PricingGrid from "@/components/pricing-grid";
-import PricingCard from "@/components/pricing-card";
-import SectionHeader from "./UI/SectionHeader";
+import SectionContainer from "@/components/SectionContainer";
+import WhatWeOffer from "@/components/WhatWeOffer";
+import ToggleButton from "@/components/ToggleButton";
+import PricingGrid from "@/components/PricingGrid";
+import PricingCard from "@/components/PackageCard";
+import SectionHeader from "./ui/SectionHeader";
 
 export default function PersonalBranding() {
   const [selectedOption, setSelectedOption] = useState("Coaches/Consultants");

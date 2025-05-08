@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import FeatureList from "./feature-list";
+import FeatureList from "./FeatureList";
 
 interface PricingCardProps {
   title: string;
