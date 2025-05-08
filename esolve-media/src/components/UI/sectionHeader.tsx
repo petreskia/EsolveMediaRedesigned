@@ -3,14 +3,18 @@ interface SectionHeaderProps {
   subheading: string;
 }
 
-export default function sectionHeader({
+export default function SectionHeader({
   heading,
   subheading,
 }: SectionHeaderProps) {
   return (
-    <div className="flex justify-between items-center">
-      <h2 className="text-7xl font-bold uppercase">{heading}</h2>
-      <p className="text-3xl whitespace-pre-line text-white/70">{subheading}</p>
+    <div className="flex flex-col gap-2 md:flex-row md:justify-between md:items-center mb-8">
+      <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold uppercase">
+        {heading}
+      </h2>
+      <p className="text-lg md:text-xl lg:text-3xl whitespace-pre-line text-white/70 max-w-xs md:max-w-sm lg:max-w-md">
+        {subheading}
+      </p>
     </div>
   );
 }

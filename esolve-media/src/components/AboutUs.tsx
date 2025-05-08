@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Button from "./UI/Button";
-import SectionHeader from "./UI/sectionHeader";
+import SectionHeader from "./UI/SectionHeader";
+import SectionContainer from "./section-container";
 
 export default function AboutUs() {
   // Function to handle button click
@@ -10,47 +11,69 @@ export default function AboutUs() {
     // Logic for button click
     window.location.href = "/contact";
   };
+
   return (
-    <div className="p-16">
+    <SectionContainer className="bg-gradient-to-b from-black to-neutral-900">
       {/* Header */}
       <SectionHeader
-        heading="About Us"
+        heading="ABOUT US"
         subheading={`Expert teams.\nTailored to your mission.`}
       />
+
       {/* Main Content */}
-      <p className="mb-5 mt-30 text-3xl">
-        At Esolve Media, we specialize in assembling high-performing teams of
-        verified specialists across creative, tech, and marketing disciplines.
-        Our core experts are already onboarded, vetted, and ready to deliver —
-        ensuring professional project experiences for you as a client – faster,
-        smarter and with better cost efficiency than building in-house.
-      </p>
-      <p className="text-3xl">
-        We continually recruit and qualify new talent to stay ahead of market
-        demands, keeping our delivery sharp and flexible without sacrificing
-        quality or timelines.
-      </p>
+      <div className="space-y-6 md:space-y-8 mt-12">
+        <p className="text-lg md:text-xl lg:text-2xl leading-relaxed">
+          At Esolve Media, we specialize in assembling{" "}
+          <span className="font-medium">
+            high-performing teams of verified specialists across creative, tech,
+            and marketing disciplines
+          </span>
+          . Our core experts are already onboarded, vetted, and ready to deliver
+          — ensuring professional project experiences for you as a client –{" "}
+          <span className="font-medium">
+            faster, smarter and with better cost efficiency than building
+            in-house
+          </span>
+          .
+        </p>
+        <p className="text-lg md:text-xl lg:text-2xl leading-relaxed">
+          We continually recruit and qualify new talent to stay ahead of market
+          demands, keeping our delivery sharp and flexible without sacrificing
+          quality or timelines.
+        </p>
+      </div>
+
       {/* Contact */}
-      <div className="w-full text-center mt-30 flex flex-col items-center justify-center">
-        <p className="text-4xl font-bold leading-1">Got skills?</p>
-        <span className="text-2xl text-teal-200/60 my-10">
-           We’re always looking for the best.
-        </span>
+      <div className="w-full text-center mt-20 md:mt-24 lg:mt-32 flex flex-col items-center justify-center">
+        <p className="text-2xl md:text-3xl lg:text-4xl font-bold">
+          Got skills?
+        </p>
+        <p className="text-lg md:text-xl lg:text-2xl text-white/70 my-6">
+          We&apos;re always looking for the best.
+        </p>
         <Button text="Let's talk" onClick={handleButtonClick} />
       </div>
+
       {/* Image */}
-      <div className="relative w-full h-[800px] mt-20">
-        <Image
-          src="/images/Eskil.jpg"
-          alt="Co-Founder"
-          fill
-          className="object-cover"
-        />
+      <div className="mt-16 md:mt-20 lg:mt-24">
+        <div className="relative w-full aspect-[16/9] md:aspect-[21/9] lg:h-[600px]">
+          <Image
+            src="/images/Eskil.jpg"
+            alt="Co-Founder"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="mt-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium">
+            Eskil
+          </h2>
+          <h3 className="text-lg md:text-xl lg:text-2xl text-white/50">
+            Co-Founder
+          </h3>
+        </div>
       </div>
-      <div className="mt-5">
-        <h2 className="text-4xl">Eskil</h2>
-        <h3 className="text-2xl text-white/50">Co-Founder</h3>
-      </div>
-    </div>
+    </SectionContainer>
   );
 }
