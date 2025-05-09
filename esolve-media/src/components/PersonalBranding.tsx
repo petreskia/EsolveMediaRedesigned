@@ -140,7 +140,7 @@ export default function PersonalBranding() {
     <SectionContainer className="bg-gradient-to-b from-black to-neutral-900">
       <SectionHeader
         heading="Personal Branding"
-        subheading="Coaches/Consultants & Brand developers"
+        subheading={`Coaches/Consultants & \n Brand developers`}
       />
 
       <WhatWeOffer />

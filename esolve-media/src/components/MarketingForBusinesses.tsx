@@ -68,8 +68,8 @@ export default function MarketingForBusinesses() {
   return (
     <SectionContainer className="bg-gradient-to-b from-neutral-900 to-black">
       <SectionHeader
-        heading="Marketing for Businesses"
-        subheading="Smart marketing for business growth"
+        heading={`Marketing for \nBusinesses`}
+        subheading={`Smart marketing for \nbusiness growth`}
       />
 
       <WhatWeOffer />

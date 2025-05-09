@@ -9,10 +9,10 @@ export default function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <div className="flex flex-col gap-2 md:flex-row md:justify-between md:items-center mb-8">
-      <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold uppercase">
+      <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold uppercase whitespace-pre-line">
         {heading}
       </h2>
-      <p className="text-lg md:text-xl lg:text-3xl whitespace-pre-line text-white/70 max-w-xs md:max-w-sm lg:max-w-md">
+      <p className="text-lg md:text-xl lg:text-3xl whitespace-pre-line text-white/70 max-w-xs md:max-w-sm lg:max-w-md text-end">
         {subheading}
       </p>
     </div>
