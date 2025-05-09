@@ -29,12 +29,6 @@ export default function Footer() {
                 Home
               </Link>
               <Link
-                href="/about"
-                className="text-white/70 hover:text-white transition-colors"
-              >
-                About Us
-              </Link>
-              <Link
                 href="/services"
                 className="text-white/70 hover:text-white transition-colors"
               >
@@ -94,13 +88,13 @@ export default function Footer() {
           </p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <Link
-              href="/privacy"
+              href="/"
               className="text-white/50 text-sm hover:text-white transition-colors"
             >
               Privacy Policy
             </Link>
             <Link
-              href="/terms"
+              href="/"
               className="text-white/50 text-sm hover:text-white transition-colors"
             >
               Terms of Service
