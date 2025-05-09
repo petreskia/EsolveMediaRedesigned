@@ -1,7 +1,7 @@
 import PricingCard from "./PackageCard";
 import PricingGrid from "./PricingGrid";
 import SectionContainer from "./SectionContainer";
-import SectionHeader from "./ui/SectionHeader";
+import SectionHeader from "./SectionHeader";
 import WhatWeOffer from "./WhatWeOffer";
 
 export default function MarketingForBusinesses() {

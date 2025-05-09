@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Button from "./ui/Button";
-import SectionHeader from "./ui/SectionHeader";
+import Button from "./Button";
+import SectionHeader from "./SectionHeader";
 import SectionContainer from "./SectionContainer";
 
 export default function AboutUs() {
