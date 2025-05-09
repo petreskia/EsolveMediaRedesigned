@@ -19,3 +19,25 @@ body {
   color: var(--foreground);
   font-family: "Urbanist", Arial, Helvetica, sans-serif;
 }
+.custom-shadow {
+  background: rgba(0, 0, 0, 0); /* Start with transparent background */
+  /* Create a layered gradient effect */
+  background-image: radial-gradient(
+      at center top,
+      rgba(83, 245, 234, 0.3),
+      transparent 70%
+    ),
+    /* Outer circle */
+      radial-gradient(at center top, rgba(44, 41, 41, 0.5), transparent 70%),
+    /* Inner circle */
+      linear-gradient(to bottom, rgba(59, 61, 62, 0.8), transparent 90%); /* Bottom fade */
+
+  height: 60%; /* Adjust as needed */
+  width: 100%;
+  position: absolute;
+  top: 0;
+  filter: blur(120px); /* Adjust blur to match the image */
+  z-index: 1;
+  border-bottom-left-radius: 55%; /* Slightly adjusted for roundness */
+  border-bottom-right-radius: 55%; /* Slightly adjusted for roundness */
+}

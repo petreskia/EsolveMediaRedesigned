@@ -1,8 +1,10 @@
 export default function Banner() {
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center bg-black text-white px-4 sm:px-6">
+    <div className="relative min-h-screen flex flex-col items-center justify-center text-white px-4 sm:px-6 bg-black">
+      {/* Shaddow */}
+      <div className="custom-shadow"></div>
       {/* Center logo with circular design */}
-      <div className="relative mb-8">
+      <div className="relative mb-8 z-2">
         <div className="w-48 h-48 md:w-64 md:h-64 relative">
           {/* Outer circle */}
           <div className="absolute inset-0 border-2 border-white rounded-full flex items-center justify-center">
