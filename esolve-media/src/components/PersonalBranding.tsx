@@ -5,7 +5,7 @@ import SectionContainer from "./SectionContainer";
 import WhatWeOffer from "./WhatWeOffer";
 import ToggleButton from "./ToggleButton";
 import PricingGrid from "./PricingGrid";
-import PricingCard from "./PackageCard";
+import PricingCard from "./PricingCard";
 import SectionHeader from "./SectionHeader";
 
 export default function PersonalBranding() {

@@ -1,9 +1,7 @@
-"use client";
-
 import type { ReactNode } from "react";
 import FeatureList from "./FeatureList";
 
-interface PackageCardProps {
+interface PricingCardProps {
   title: string;
   subtitle: string;
   price?: string;
@@ -11,10 +9,9 @@ interface PackageCardProps {
   ctaText: string;
   showMore?: boolean;
   customHeader?: ReactNode;
-  onClick: () => void;
 }
 
-export default function PackageCard({
+export default function PricingCard({
   title,
   subtitle,
   price,
@@ -22,8 +19,7 @@ export default function PackageCard({
   ctaText,
   showMore = false,
   customHeader,
-  onClick,
-}: PackageCardProps) {
+}: PricingCardProps) {
   return (
     <div className="bg-neutral-900/90 rounded-3xl p-6 md:p-8 flex flex-col h-full">
       <div>
@@ -42,10 +38,7 @@ export default function PackageCard({
       <FeatureList features={features} showMore={showMore} />
 
       <div className="mt-auto pt-8">
-        <button
-          onClick={onClick}
-          className="w-full py-3 px-6 bg-teal-400/80 hover:bg-teal-400 text-black font-medium rounded-full transition-colors"
-        >
+        <button className="w-full py-3 px-6 bg-teal-400/80 hover:bg-teal-400 text-black font-medium rounded-full transition-colors">
           {ctaText}
         </button>
       </div>

@@ -1,4 +1,4 @@
-import PricingCard from "./PackageCard";
+import PricingCard from "./PricingCard";
 import PricingGrid from "./PricingGrid";
 import SectionContainer from "./SectionContainer";
 import SectionHeader from "./SectionHeader";
