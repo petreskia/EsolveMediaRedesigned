@@ -4,7 +4,7 @@ import { useState } from "react";
 import {
   personalBrandingPackages,
   businessMarketingPackages,
-} from "./packages-data";
+} from "../../data/packages-data";
 import ExpandedPackageCard from "./ExpandedPackageCard";
 import DiscoveryCallModal from "./DiscoveryCallModal";
 import PackageCard from "./PackageCard";

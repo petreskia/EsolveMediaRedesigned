@@ -12,7 +12,7 @@ import {
   AnalyticToolIcon,
   ResourceIcon,
   ManagementIcon,
-} from "@/components/ServiceIcons"; // Adjust the import path as necessary
+} from "@/components/services/ServiceIcons"; // Adjust the import path as necessary
 
 export const serviceCategories: ServiceCategory[] = [
   {

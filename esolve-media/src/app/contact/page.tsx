@@ -1,5 +1,5 @@
-import ContactForm from "@/components/contact-form";
-import SectionHeader from "@/components/SectionHeader";
+import ContactForm from "@/components/contact/contact-form";
+import SectionHeader from "@/components/layouts/SectionHeader";
 
 export default function ContactPage() {
   return (

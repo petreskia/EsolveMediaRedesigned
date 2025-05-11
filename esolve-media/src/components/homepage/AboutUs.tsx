@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import Button from "./Button";
-import SectionHeader from "./SectionHeader";
-import SectionContainer from "./SectionContainer";
+import Button from "../ui/Button";
+import SectionHeader from "../layouts/SectionHeader";
+import SectionContainer from "../layouts/SectionContainer";
 
 export default function AboutUs() {
   // Function to handle button click

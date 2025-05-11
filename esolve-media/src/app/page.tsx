@@ -1,7 +1,7 @@
-import AboutUs from "../components/AboutUs";
-import Banner from "../components/Banner";
-import MarketingForBusinesses from "../components/MarketingForBusinesses";
-import PersonalBranding from "../components/PersonalBranding";
+import AboutUs from "../components/homepage/AboutUs";
+import Banner from "../components/homepage/Banner";
+import MarketingForBusinesses from "../components/homepage/MarketingForBusinesses";
+import PersonalBranding from "../components/homepage/PersonalBranding";
 
 export default function Home() {
   return (

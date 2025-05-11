@@ -1,4 +1,4 @@
-import ServiceCategory from "@/components/ServiceCategory";
+import ServiceCategory from "@/components/services/ServiceCategory";
 import {
   WebDesignIcon,
   FunnelIcon,
@@ -19,8 +19,8 @@ import {
   AnimationIcon,
   ManagementIcon,
   SocialIcon,
-} from "../../components/ServiceIcons"; // Adjust the import path as necessary
-import SectionHeader from "@/components/SectionHeader";
+} from "../../components/services/ServiceIcons"; // Adjust the import path as necessary
+import SectionHeader from "@/components/layouts/SectionHeader";
 
 export default function ServicesPage() {
   // Web Design, Funnels & Platform Development services

@@ -1,5 +1,5 @@
-import PackagesSection from "@/components/packages-section";
-import SectionHeader from "@/components/SectionHeader";
+import PackagesSection from "@/components/packages/packages-section";
+import SectionHeader from "@/components/layouts/SectionHeader";
 
 export default function PackagesPage() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type ReactNode } from "react";
-import ProcessSteps from "./ProcessSteps";
+import ProcessSteps from "../layouts/ProcessSteps";
 import ServiceCard from "./ServiceCard";
 
 interface ServiceItem {
