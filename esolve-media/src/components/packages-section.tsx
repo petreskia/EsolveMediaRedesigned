@@ -6,8 +6,8 @@ import {
   businessMarketingPackages,
 } from "./packages-data";
 import ExpandedPackageCard from "./ExpandedPackageCard";
-import PackageCard from "./PackageCardTwo";
 import DiscoveryCallModal from "./DiscoveryCallModal";
+import PackageCard from "./PackageCard";
 
 interface PackagesSectionProps {
   title: string;
