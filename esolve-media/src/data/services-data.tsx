@@ -1,215 +1,185 @@
-import type { ServiceCategory, PricingTier } from "@/types/package-types";
-import {
-  WebDesignIcon,
-  FunnelIcon,
-  CommunityIcon,
-  StrategyIcon,
-  BrandingIcon,
-  SystemIcon,
-  AutomationIcon,
-  EmailIcon,
-  AiIcon,
-  AnalyticToolIcon,
-  ResourceIcon,
-  ManagementIcon,
-} from "@/components/services/ServiceIcons"; // Adjust the import path as necessary
+import { withId } from "@/utils/withId";
 
-export const serviceCategories: ServiceCategory[] = [
+export const webDesignServices = withId([
   {
-    id: "web-design",
-    title: "Web Design, Funnels & Platform Development",
-    services: [
-      {
-        id: "complete-website",
-        number: 1,
-        title: "Complete Website Design",
-        description:
-          "Custom websites built with modern technologies for optimal performance",
-        icon: <WebDesignIcon />,
-      },
-      {
-        id: "funnel-setup",
-        number: 2,
-        title: "Funnel set up",
-        description:
-          "Strategic sales funnels designed to convert visitors into customers",
-        icon: <FunnelIcon />,
-      },
-      {
-        id: "community-platforms",
-        number: 3,
-        title: "Community platforms",
-        description:
-          "Engaging spaces for your audience to connect and collaborate",
-        icon: <CommunityIcon />,
-      },
-    ],
+    title: "Hosting or handover",
+    description: "Secure hosting and a seamless handover–fully ready to go.",
+    iconName: "hosting",
   },
   {
-    id: "strategy-content",
-    title: "Strategy & Content",
-    services: [
-      {
-        id: "situation-analysis",
-        number: 1,
-        title: "Situation analysis/strategy",
-        description:
-          "Comprehensive analysis of your current situation and strategic planning",
-        icon: <StrategyIcon />,
-      },
-      {
-        id: "content-strategy",
-        number: 2,
-        title: "Content strategy",
-        description:
-          "Strategic content planning aligned with your business goals",
-        icon: <StrategyIcon />,
-      },
-      {
-        id: "branding-elements",
-        number: 3,
-        title: "Branding elements",
-        description:
-          "Visual identity elements that capture your brand's essence",
-        icon: <BrandingIcon />,
-      },
-    ],
+    title: "Funnels",
+    description:
+      "We build funnels–strategic, scalable, and tailored to your goals.",
+    iconName: "funnels",
   },
   {
-    id: "systems-automations",
-    title: "Systems & automations",
-    services: [
-      {
-        id: "internal-workflow",
-        number: 1,
-        title: "Internal workflow optimization",
-        description:
-          "Streamlined processes to improve efficiency and productivity",
-        icon: <SystemIcon />,
-      },
-      {
-        id: "custom-automations",
-        number: 2,
-        title: "Custom automations & integrations",
-        description:
-          "Tailored automation solutions to save time and reduce errors",
-        icon: <AutomationIcon />,
-      },
-      {
-        id: "email-flow",
-        number: 3,
-        title: "Email flow set up",
-        description:
-          "Automated email sequences to nurture leads and drive conversions",
-        icon: <EmailIcon />,
-      },
-      {
-        id: "ai-agent",
-        number: 4,
-        title: "AI agent",
-        description:
-          "Intelligent assistants to handle routine tasks and customer inquiries",
-        icon: <AiIcon />,
-      },
-      {
-        id: "analytic-tools",
-        number: 5,
-        title: "Analytic tools",
-        description:
-          "Data collection and analysis tools to inform business decisions",
-        icon: <AnalyticToolIcon />,
-      },
-    ],
+    title: "Platform development",
+    description:
+      "Designed for growth, performance, and seamless user experience.",
+    iconName: "platform-development",
   },
   {
-    id: "lead-magnets",
-    title: "Lead magnets",
-    services: [
-      {
-        id: "free-resource",
-        number: 1,
-        title: "Free resource development",
-        description:
-          "Valuable content to attract and engage your target audience",
-        icon: <ResourceIcon />,
-      },
-      {
-        id: "chat-widget",
-        number: 2,
-        title: "Chat widget integration + CRM integration",
-        description:
-          "Interactive chat solution integrated with your customer relationship management system",
-        icon: <AiIcon />,
-      },
-    ],
+    title: "Community platforms",
+    description:
+      "Built to connect, scale and grow with your audience - pre built or made from scratch.",
+    iconName: "community-platforms",
   },
   {
-    id: "ads-visibility",
-    title: "Ads & Visibility",
-    services: [
-      {
-        id: "boosted-reel",
-        number: 1,
-        title: "Boosted reel management",
-        description:
-          "Strategic boosting and management of your reels for maximum reach and engagement",
-        icon: <ManagementIcon />,
-      },
-    ],
+    title: "Coding complex websites from scratch",
+    description:
+      "Clean code, no templates, built for performance and flexibility.",
+    iconName: "coding-complex-websites",
   },
-];
+  {
+    title: "Analytic tools/ SEO optimization",
+    description:
+      "We optimize SEO and create analytics tools—boosting insights and traffic.",
+    iconName: "analytic-tools",
+  },
+]);
 
-export const pricingTiers: PricingTier[] = [
+export const graphicDesignServices = withId([
   {
-    id: "trial",
-    title: "Trial",
-    price: "899",
-    description: "1-2 weeks of outreach to test the waters",
-    features: [
-      "500 leads/month",
-      "AI personalization",
-      "Basic segmentation",
-      "Email & LinkedIn",
-      "1 channel",
-    ],
+    title: "Logo design",
+    description:
+      "Unique, memorable logos crafted to reflect your brand’s identity and values.",
+    iconName: "logo-design",
   },
   {
-    id: "standard",
-    title: "Standard",
-    price: "1697",
-    description: "Consistent outreach for steady growth",
-    features: [
-      "1,500 leads/month",
-      "AI personalization",
-      "Advanced segmentation",
-      "Email & LinkedIn",
-      "2 channels",
-    ],
+    title: "Free resource development",
+    description:
+      "Branded PDF resources that build trust and showcase your expertise.",
+    iconName: "free-resource-development",
   },
   {
-    id: "premium",
-    title: "Premium",
-    price: "3070",
-    description: "Comprehensive outreach for serious growth",
-    features: [
-      "3,000 leads/month",
-      "AI personalization",
-      "Advanced segmentation",
-      "Email, LinkedIn & Twitter",
-      "3 channels",
-    ],
+    title: "Branding",
+    description:
+      "Strategic, cohesive branding that defines your look, voice, and value.",
+    iconName: "branding",
+  },
+]);
+
+export const systemsServices = withId([
+  {
+    title: "Internal workflow optimization",
+    description:
+      "Streamlined systems and automations tailored to how you work.",
+    iconName: "internal-workflow-optimization",
   },
   {
-    id: "elite",
-    title: "Elite",
-    price: "5050",
-    description: "Maximum outreach for market domination",
-    features: [
-      "5,000 leads/month",
-      "AI personalization",
-      "Advanced segmentation",
-      "All major platforms",
-      "5+ channels",
-    ],
+    title: "Custom automations & integrations",
+    description:
+      "We automate tasks and connect your tools for seamless, efficient workflows.",
+    iconName: "custom-automations",
   },
-];
+  {
+    title: "Email flow set up",
+    description:
+      "Automate email flows to engage, nurture, and convert your audience seamlessly.",
+    iconName: "email-flow-set-up",
+  },
+  {
+    title: "AI agent implementations",
+    description:
+      "Integrate AI agents to optimize processes and enhance customer interactions.",
+    iconName: "ai-agent",
+  },
+  {
+    title: "Analytic tools",
+    description:
+      "Use analytic tools to track performance and drive data-driven decisions.",
+    iconName: "analytic-tools",
+  },
+]);
+
+export const leadGenServices = withId([
+  {
+    title: "Coding complex websites from scratch",
+    description:
+      "Clean code, no templates, built for performance and flexibility.",
+    iconName: "coding-complex-websites",
+  },
+  {
+    title: "Funnels",
+    description:
+      "We build funnels–strategic, scalable, and tailored to your goals.",
+    iconName: "funnels",
+  },
+  {
+    title: "Platform development",
+    description:
+      "Designed for growth, performance, and seamless user experience.",
+    iconName: "platform-development",
+  },
+  {
+    title: "Community platforms",
+    description:
+      "Built to connect, scale and grow with your audience - pre built or made from scratch.",
+    iconName: "community-platforms",
+  },
+  {
+    title: "Pre set platforms",
+    description: "We set up and customize pre-built community platforms",
+    iconName: "pre-set-platforms",
+  },
+  {
+    title: "Analytic tools/ SEO optimization",
+    description:
+      "We optimize SEO and create analytics tools—boosting insights and traffic.",
+    iconName: "analytic-tools",
+  },
+  {
+    title: "Coding complex websites from scratch",
+    description:
+      "Clean code, no templates, built for performance and flexibility.",
+    iconName: "coding-complex-websites",
+  },
+  {
+    title: "Funnels",
+    description:
+      "We build funnels–strategic, scalable, and tailored to your goals.",
+    iconName: "funnels",
+  },
+  {
+    title: "Platform development",
+    description:
+      "Designed for growth, performance, and seamless user experience.",
+    iconName: "platform-development",
+  },
+]);
+
+export const shortFormServices = withId([
+  {
+    title: "Idea development & scripting",
+    description:
+      "We help shape ideas and craft compelling scripts to bring your vision to life.",
+    iconName: "idea-development",
+  },
+  {
+    title: "Post production editing",
+    description:
+      "Polish your content with expert editing for a clean, professional finish.",
+    iconName: "post-production-editing",
+  },
+  {
+    title: "2D animation",
+    description:
+      "Eye-catching animated visuals to tell your story with clarity and style.",
+    iconName: "2d-animation",
+  },
+]);
+
+export const managementServices = withId([
+  {
+    title: "Boosted reel management",
+    description:
+      "Clean code, no templates, built for performance and flexibility.",
+    iconName: "boosted-reel-management",
+  },
+  {
+    title: "Social media management",
+    description:
+      "Hands-on management of one or all your social media profiles.",
+    iconName: "social-media-management",
+  },
+]);

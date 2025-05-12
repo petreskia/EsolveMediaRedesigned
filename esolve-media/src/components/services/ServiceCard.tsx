@@ -1,30 +1,50 @@
-import type { ReactNode } from "react";
+// ServiceCard.tsx
+import Image from "next/image";
 
 interface ServiceCardProps {
-  number: number;
   title: string;
   description: string;
-  icon: ReactNode;
+  iconName: string;
 }
 
 export default function ServiceCard({
-  number,
   title,
   description,
-  icon,
+  iconName,
 }: ServiceCardProps) {
   return (
-    <div className="bg-neutral-900/90 rounded-lg p-5 relative">
-      {/* Number badge */}
-      <div className="absolute top-3 left-3 w-6 h-6 rounded-full bg-teal-400/20 flex items-center justify-center text-xs text-teal-400">
-        {number}
+    <div
+      className="bg-custom-gradient-card border-b-gray-300 border rounded-4xl
+ p-6 relative flex flex-col h-full"
+    >
+      {/* Top-left small icon */}
+      <div className="absolute top-3 left-3">
+        <div className="w-14 h-14 rounded-full bg-teal-300/40 flex items-center justify-center">
+          <Image
+            src={`/icons/small-icons/${iconName}.svg`}
+            alt={`${title} small icon`}
+            width={35}
+            height={35}
+            className="object-contain"
+          />
+        </div>
       </div>
 
-      {/* Content */}
-      <div className="pt-8">
-        <div className="mb-3 h-24 flex items-center justify-center">{icon}</div>
-        <h3 className="text-lg font-medium mb-2">{title}</h3>
-        <p className="text-sm text-white/70">{description}</p>
+      {/* Center large icon */}
+      <div className="flex-grow flex items-center justify-center py-12">
+        <Image
+          src={`/icons/bg-icons/${iconName}.svg`}
+          alt={`${title} large icon`}
+          width={220}
+          height={220}
+          className="object-contain"
+        />
+      </div>
+
+      {/* Bottom text content */}
+      <div className="mt-auto">
+        <h3 className="text-2xl font-medium text-white mb-2">{title}</h3>
+        <p className="text-white/70">{description}</p>
       </div>
     </div>
   );

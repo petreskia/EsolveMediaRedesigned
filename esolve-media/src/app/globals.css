@@ -41,3 +41,20 @@ body {
   border-bottom-left-radius: 50%; /* Slightly adjusted for roundness */
   border-bottom-right-radius: 50%; /* Slightly adjusted for roundness */
 }
+
+.bg-custom-gradient {
+  /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=385752&c2=010101&gt=r&gd=dtt
+*/
+  background: #385752;
+  background: radial-gradient(at center top, #385752, #010101);
+}
+.bg-custom-gradient-card {
+  /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=283734&c2=010101&gt=l&gd=dbb
+*/
+  background: #283734;
+  background: linear-gradient(0deg, #283734, #010101);
+}
