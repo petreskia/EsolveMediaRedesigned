@@ -38,7 +38,6 @@ import {
   systemsServices,
   shortFormServices,
   managementServices,
-  leadGenServices,
 } from "@/data/services-data";
 import {
   personalBrandingPackages,
@@ -54,7 +53,6 @@ const allServices = [
   ...systemsServices,
   ...shortFormServices,
   ...managementServices,
-  ...leadGenServices,
 ];
 
 // Form schema
@@ -75,12 +73,12 @@ const formSchema = z.object({
 type FormValues = z.infer<typeof formSchema>;
 
 export default function ContactPage() {
-  const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [selectedPackageType, setSelectedPackageType] =
     useState<string>("personal-branding");
   const [selectedPackageId, setSelectedPackageId] = useState<string | null>(
     null
   );
+  const [selectedServices, setSelectedServices] = useState<string[]>([]);
 
   // Initialize form
   const form = useForm<FormValues>({
@@ -108,13 +106,11 @@ export default function ContactPage() {
   // Handle service selection
   const toggleService = (serviceId: string) => {
     setSelectedServices((prev) => {
-      const newSelectedServices = prev.includes(serviceId)
+      const newSelected = prev.includes(serviceId)
         ? prev.filter((id) => id !== serviceId)
         : [...prev, serviceId];
-
-      // Update form value
-      form.setValue("services", newSelectedServices);
-      return newSelectedServices;
+      form.setValue("services", newSelected, { shouldValidate: true });
+      return newSelected;
     });
   };
 
@@ -328,7 +324,6 @@ export default function ContactPage() {
                             ? "bg-teal-400/20 border border-teal-400/50"
                             : "bg-neutral-800 border border-neutral-700 hover:bg-neutral-700"
                         }`}
-                        onClick={() => toggleService(service.id)}
                       >
                         <div className="flex items-start gap-2 md:gap-3">
                           <Checkbox
