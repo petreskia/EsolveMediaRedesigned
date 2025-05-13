@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -46,7 +46,6 @@ import {
   HyperPersonalizedAIPackages,
 } from "@/data/packages-data";
 import type { PackageData } from "@/types/package-types";
-import SectionHeader from "@/components/layouts/SectionHeader";
 
 // Combine all services for easier access
 const allServices = [
@@ -82,6 +81,7 @@ export default function ContactPage() {
   const [selectedPackageId, setSelectedPackageId] = useState<string | null>(
     null
   );
+
   // Initialize form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -97,17 +97,7 @@ export default function ContactPage() {
       packageId: undefined,
     },
   });
-  // Sync selectedPackageId to form state
-  useEffect(() => {
-    if (selectedPackageId) {
-      form.setValue("packageId", selectedPackageId);
-    }
-  }, [selectedPackageId, form]);
 
-  // Sync selectedPackageId to form state
-  useEffect(() => {
-    form.setValue("services", selectedServices);
-  }, [selectedServices, form]);
   // Handle form submission
   const onSubmit = (data: FormValues) => {
     console.log("Form submitted:", data);
@@ -117,12 +107,15 @@ export default function ContactPage() {
 
   // Handle service selection
   const toggleService = (serviceId: string) => {
-    const newSelectedServices = selectedServices.includes(serviceId)
-      ? selectedServices.filter((id) => id !== serviceId)
-      : [...selectedServices, serviceId];
+    setSelectedServices((prev) => {
+      const newSelectedServices = prev.includes(serviceId)
+        ? prev.filter((id) => id !== serviceId)
+        : [...prev, serviceId];
 
-    setSelectedServices(newSelectedServices);
-    form.setValue("services", newSelectedServices);
+      // Update form value
+      form.setValue("services", newSelectedServices);
+      return newSelectedServices;
+    });
   };
 
   // Handle package selection
@@ -139,6 +132,7 @@ export default function ContactPage() {
         | "ai-outreach"
         | "none"
     );
+
     form.setValue("packageId", packageId);
   };
 
@@ -159,12 +153,12 @@ export default function ContactPage() {
   return (
     <main className="bg-black text-white min-h-screen">
       <div className="max-w-4xl mx-auto px-4 py-16">
-        <SectionHeader
-          heading={"Contact"}
-          subheading={
-            "Tell us about your project and we will get back to you within 24hours"
-          }
-        />
+        <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
+        <p className="text-lg text-white/70 mb-12">
+          Tell us about your project and we will get back to you within 24
+          hours.
+        </p>
+
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
             {/* Personal Information */}
@@ -251,8 +245,8 @@ export default function ContactPage() {
                   <FormLabel>Budget Range</FormLabel>
                   <FormControl>
                     <RadioGroup
+                      value={field.value}
                       onValueChange={field.onChange}
-                      defaultValue={field.value}
                       className="flex flex-wrap gap-4"
                     >
                       <FormItem className="flex items-center space-x-2 space-y-0">
@@ -325,32 +319,32 @@ export default function ContactPage() {
                   Select Services
                 </AccordionTrigger>
                 <AccordionContent>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-4">
                     {allServices.map((service) => (
                       <div
                         key={service.id}
-                        className={`p-4 rounded-lg cursor-pointer transition-all ${
+                        className={`p-3 md:p-4 rounded-lg cursor-pointer transition-all text-sm md:text-base ${
                           selectedServices.includes(service.id)
                             ? "bg-teal-400/20 border border-teal-400/50"
                             : "bg-neutral-800 border border-neutral-700 hover:bg-neutral-700"
                         }`}
                         onClick={() => toggleService(service.id)}
                       >
-                        <div className="flex items-start gap-3">
+                        <div className="flex items-start gap-2 md:gap-3">
                           <Checkbox
                             id={`service-${service.id}`}
                             checked={selectedServices.includes(service.id)}
                             onCheckedChange={() => toggleService(service.id)}
-                            className="mt-1"
+                            className="mt-0.5 md:mt-1 h-3.5 w-3.5 md:h-4 md:w-4"
                           />
-                          <div>
+                          <div className="flex-1">
                             <label
                               htmlFor={`service-${service.id}`}
-                              className="font-medium cursor-pointer block mb-1"
+                              className="font-medium cursor-pointer block mb-0.5 md:mb-1 text-xs md:text-sm"
                             >
                               {service.title}
                             </label>
-                            <p className="text-sm text-white/70">
+                            <p className="text-xs md:text-sm text-white/70 line-clamp-2">
                               {service.description}
                             </p>
                           </div>
@@ -392,94 +386,98 @@ export default function ContactPage() {
                         value={packageType}
                         className="mt-0"
                       >
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          <RadioGroup
-                            value={selectedPackageId || ""}
-                            onValueChange={(value) =>
-                              selectPackage(packageType, value)
-                            }
-                          >
-                            {getPackagesByType(packageType).map((pkg) => (
-                              <div
-                                key={pkg.id}
-                                className={`p-4 rounded-lg cursor-pointer transition-all ${
-                                  selectedPackageType === packageType &&
-                                  selectedPackageId === pkg.id
-                                    ? "bg-teal-400/20 border border-teal-400/50"
-                                    : "bg-neutral-800 border border-neutral-700 hover:bg-neutral-700"
-                                }`}
-                                onClick={() =>
-                                  selectPackage(packageType, pkg.id)
-                                }
-                              >
-                                <div className="flex items-start gap-3">
-                                  <RadioGroupItem
-                                    value={pkg.id}
-                                    id={`package-${packageType}-${pkg.id}`}
-                                    className="mt-1"
-                                  />
-                                  <div>
-                                    <label
-                                      htmlFor={`package-${packageType}-${pkg.id}`}
-                                      className="font-medium cursor-pointer block mb-1"
-                                    >
-                                      {pkg.title}{" "}
-                                      {pkg.price && `- $${pkg.price}`}
-                                    </label>
-                                    <p className="text-sm text-white/70 mb-2">
-                                      {pkg.subtitle}
-                                    </p>
-                                    <ul className="text-sm text-white/70 space-y-1">
-                                      {pkg.features
-                                        .slice(0, 3)
-                                        .map((feature, idx) => (
-                                          <li
-                                            key={idx}
-                                            className="flex items-start gap-2"
-                                          >
-                                            <span className="text-teal-400 mt-1">
-                                              ✓
-                                            </span>
-                                            <span>{feature.title}</span>
-                                          </li>
-                                        ))}
-                                      {pkg.features.length > 3 && (
-                                        <li className="text-xs text-white/50 pl-5">
-                                          + {pkg.features.length - 3} more
-                                          features
-                                        </li>
-                                      )}
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            ))}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                          {getPackagesByType(packageType).map((pkg) => (
                             <div
-                              className={`p-4 rounded-lg cursor-pointer transition-all ${
+                              key={pkg.id}
+                              className={`p-3 md:p-4 rounded-lg cursor-pointer transition-all text-sm md:text-base ${
                                 selectedPackageType === packageType &&
-                                selectedPackageId === "none"
+                                selectedPackageId === pkg.id
                                   ? "bg-teal-400/20 border border-teal-400/50"
                                   : "bg-neutral-800 border border-neutral-700 hover:bg-neutral-700"
                               }`}
-                              onClick={() => selectPackage(packageType, "none")}
+                              onClick={() => selectPackage(packageType, pkg.id)}
                             >
-                              <div className="flex items-start gap-3">
-                                <RadioGroupItem
-                                  value="none"
-                                  id={`package-${packageType}-none`}
-                                  className="mt-1"
+                              <div className="flex items-start gap-2 md:gap-3">
+                                <input
+                                  type="radio"
+                                  name={`package-${packageType}`}
+                                  id={`package-${packageType}-${pkg.id}`}
+                                  value={pkg.id}
+                                  checked={selectedPackageId === pkg.id}
+                                  onChange={() =>
+                                    selectPackage(packageType, pkg.id)
+                                  }
+                                  className="mt-0.5 md:mt-1 h-3.5 w-3.5 md:h-4 md:w-4 accent-teal-400"
                                 />
-                                <div>
+                                <div className="flex-1">
                                   <label
-                                    htmlFor={`package-${packageType}-none`}
-                                    className="font-medium cursor-pointer block"
+                                    htmlFor={`package-${packageType}-${pkg.id}`}
+                                    className="font-medium cursor-pointer block mb-0.5 md:mb-1 text-xs md:text-sm"
                                   >
-                                    I am not interested in a package
+                                    {pkg.title} {pkg.price && `- $${pkg.price}`}
                                   </label>
+                                  <p className="text-xs md:text-sm text-white/70 mb-1 md:mb-2">
+                                    {pkg.subtitle}
+                                  </p>
+                                  <ul className="text-xs md:text-sm text-white/70 space-y-0.5 md:space-y-1">
+                                    {pkg.features
+                                      .slice(0, 2)
+                                      .map((feature, idx) => (
+                                        <li
+                                          key={idx}
+                                          className="flex items-start gap-1 md:gap-2"
+                                        >
+                                          <span className="text-teal-400 mt-0.5">
+                                            ✓
+                                          </span>
+                                          <span className="line-clamp-1">
+                                            {feature.title}
+                                          </span>
+                                        </li>
+                                      ))}
+                                    {pkg.features.length > 2 && (
+                                      <li className="text-xs text-white/50 pl-3 md:pl-5">
+                                        + {pkg.features.length - 2} more
+                                        features
+                                      </li>
+                                    )}
+                                  </ul>
                                 </div>
                               </div>
                             </div>
-                          </RadioGroup>
+                          ))}
+                          <div
+                            className={`p-3 md:p-4 rounded-lg cursor-pointer transition-all ${
+                              selectedPackageType === packageType &&
+                              selectedPackageId === "none"
+                                ? "bg-teal-400/20 border border-teal-400/50"
+                                : "bg-neutral-800 border border-neutral-700 hover:bg-neutral-700"
+                            }`}
+                            onClick={() => selectPackage(packageType, "none")}
+                          >
+                            <div className="flex items-start gap-2 md:gap-3">
+                              <input
+                                type="radio"
+                                name={`package-${packageType}`}
+                                id={`package-${packageType}-none`}
+                                value="none"
+                                checked={selectedPackageId === "none"}
+                                onChange={() =>
+                                  selectPackage(packageType, "none")
+                                }
+                                className="mt-0.5 md:mt-1 h-3.5 w-3.5 md:h-4 md:w-4 accent-teal-400"
+                              />
+                              <div>
+                                <label
+                                  htmlFor={`package-${packageType}-none`}
+                                  className="font-medium cursor-pointer block text-xs md:text-sm"
+                                >
+                                  I am not interested in a package
+                                </label>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </TabsContent>
                     ))}
