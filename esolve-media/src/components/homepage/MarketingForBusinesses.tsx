@@ -1,5 +1,5 @@
-import PricingCard from "../packages/PricingCard";
-import PricingGrid from "../PricingGrid";
+import PackageCard from "../packages/PackageCard";
+import PricingGrid from "../packages/PricingGrid";
 import SectionContainer from "../layouts/SectionContainer";
 import SectionHeader from "../layouts/SectionHeader";
 import WhatWeOffer from "../ui/WhatWeOffer";
@@ -75,10 +75,10 @@ export default function MarketingForBusinesses() {
       <WhatWeOffer />
 
       <PricingGrid>
-        <PricingCard {...businessData.starter} />
-        <PricingCard {...businessData.growth} />
-        <PricingCard {...businessData.ai} />
-        <PricingCard {...businessData.custom} />
+        <PackageCard {...businessData.starter} />
+        <PackageCard {...businessData.growth} />
+        <PackageCard {...businessData.ai} />
+        <PackageCard {...businessData.custom} />
       </PricingGrid>
     </SectionContainer>
   );

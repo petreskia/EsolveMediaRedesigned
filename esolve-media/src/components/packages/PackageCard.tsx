@@ -11,7 +11,7 @@ interface PackageCardProps {
   ctaText: string;
   showMore?: boolean;
   customHeader?: ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export default function PackageCard({
