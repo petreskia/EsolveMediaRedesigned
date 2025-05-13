@@ -10,8 +10,8 @@ import DiscoveryCallModal from "./DiscoveryCallModal";
 import PackageCard from "./PackageCard";
 
 interface PackagesSectionProps {
-  title: string;
-  subtitle: string;
+  title?: string;
+  subtitle?: string;
   category: "personal-branding" | "business-marketing";
 }
 

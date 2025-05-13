@@ -8,7 +8,7 @@ export default function SectionHeader({
   subheading,
 }: SectionHeaderProps) {
   return (
-    <div className="flex flex-col gap-2 md:flex-row md:justify-between md:items-center mt-20 mb-25">
+    <div className="flex flex-col gap-2 md:flex-row md:justify-between mt-20 mb-25">
       <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase whitespace-pre-line">
         {heading}
       </h2>

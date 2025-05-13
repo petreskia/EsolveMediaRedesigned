@@ -17,11 +17,11 @@ export default function ToggleButton({ options, onToggle }: ToggleButtonProps) {
 
   return (
     <div className="flex justify-center mb-10">
-      <div className="bg-neutral-800/80 rounded-full overflow-hidden flex">
+      <div className="bg-neutral-800/80 rounded-full border-color overflow-hidden flex">
         {options.map((option) => (
           <button
             key={option}
-            className={`px-6 py-3 text-sm md:text-base transition-colors ${
+            className={`px-6 py-3 text-sm md:text-2xl transition-colors ${
               selectedOption === option
                 ? "bg-neutral-700 text-white"
                 : "text-white/70 hover:text-white"

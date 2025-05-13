@@ -14,11 +14,7 @@ export default function MarketingForBusinesses() {
       <WhatWeOffer />
 
       {/* Personal Branding Section */}
-      <PackagesSection
-        title="Personal Branding"
-        subtitle="Coaches/Consultants"
-        category="personal-branding"
-      />
+      <PackagesSection category="personal-branding" />
     </SectionContainer>
   );
 }

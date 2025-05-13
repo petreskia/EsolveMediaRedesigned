@@ -11,6 +11,8 @@
     --background: #0a0a0a;
     --foreground: #ededed;
     --text-7xl: 70px;
+    --text-green-300: #85c1be;
+    --bg-gray-30: #747574;
   }
 }
 
@@ -58,4 +60,13 @@ body {
 .custom-icon {
   height: 180px;
   width: 180px;
+}
+.custom-green {
+  color: #85c1be;
+}
+.custom-grey {
+  background-color: #5b5d5b;
+}
+.border-color {
+  border: 1px solid #747574;
 }

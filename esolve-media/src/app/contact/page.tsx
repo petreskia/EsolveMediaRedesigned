@@ -45,6 +45,7 @@ import {
   HyperPersonalizedAIPackages,
 } from "@/data/packages-data";
 import type { PackageData } from "@/types/package-types";
+import SectionHeader from "@/components/layouts/SectionHeader";
 
 // Combine all services for easier access
 const allServices = [
@@ -147,13 +148,12 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="bg-black text-white min-h-screen">
-      <div className="max-w-4xl mx-auto px-4 py-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
-        <p className="text-lg text-white/70 mb-12">
-          Tell us about your project and we will get back to you within 24
-          hours.
-        </p>
+    <main className="w-full mb-16 px-4 md:px-8 lg:px-16 bg-black">
+      <div className=" max-w-7xl mx-auto p-20">
+        <SectionHeader
+          heading="Contact"
+          subheading="Tell us about your project and we will get back to you"
+        />
 
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -243,7 +243,7 @@ export default function ContactPage() {
                     <RadioGroup
                       value={field.value}
                       onValueChange={field.onChange}
-                      className="flex flex-wrap gap-4"
+                      className="flex flex-wrap gap-4 mt-5"
                     >
                       <FormItem className="flex items-center space-x-2 space-y-0">
                         <FormControl>
