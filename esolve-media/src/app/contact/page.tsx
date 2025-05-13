@@ -21,3 +21,6 @@
 //     </main>
 //   );
 // }
+export default function ContactPage() {
+  return <div>Temporary contact page</div>;
+}
