@@ -40,19 +40,19 @@ export default function Navbar() {
           <div className="hidden md:flex md:items-center md:space-x-8">
             <Link
               href="/"
-              className="text-white hover:text-blue-400 transition-colors px-3 py-2 text-sm font-medium"
+              className="text-white hover:text-emerald-400/60 transition-colors px-3 py-2 text-sm font-medium"
             >
               Home
             </Link>
             <Link
               href="/services"
-              className="text-white hover:text-blue-400 transition-colors px-3 py-2 text-sm font-medium"
+              className="text-white hover:text-emerald-400/60 transition-colors px-3 py-2 text-sm font-medium"
             >
               Services
             </Link>
             <Link
               href="/packages"
-              className="text-white hover:text-blue-400 transition-colors px-3 py-2 text-sm font-medium"
+              className="text-white hover:text-emerald-400/60 transition-colors px-3 py-2 text-sm font-medium"
             >
               Packages
             </Link>
