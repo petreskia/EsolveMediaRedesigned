@@ -1,12 +1,17 @@
-export interface PricingTier {
-  id: string;
+export interface Feature {
   title: string;
-  price: string;
-  description: string;
-  features: string[];
+  description?: string;
+  quantity?: string;
 }
 
-export interface SelectedPackage {
-  services: string[];
-  pricingTier: string | null;
+export interface PackageData {
+  id: string;
+  title: string;
+  subtitle: string;
+  price?: string;
+  description?: string;
+  features: Feature[];
+  ctaText: string;
+  customHeader?: React.ReactNode;
+  showMore?: boolean;
 }

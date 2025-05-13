@@ -4,7 +4,7 @@ import { useState } from "react";
 import SectionContainer from "../layouts/SectionContainer";
 import WhatWeOffer from "../ui/WhatWeOffer";
 import ToggleButton from "../ui/ToggleButton";
-import PricingGrid from "../packages/PricingGrid";
+import PricingGrid from "../packages/PackagesGrid";
 import PricingCard from "../packages/PricingCard";
 import SectionHeader from "../layouts/SectionHeader";
 

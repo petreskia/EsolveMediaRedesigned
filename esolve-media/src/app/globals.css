@@ -51,10 +51,7 @@ body {
   background: radial-gradient(at center top, #385752, #010101);
 }
 .bg-custom-gradient-card {
-  /*
-* Created with https://www.css-gradient.com
-* Gradient link: https://www.css-gradient.com/?c1=283734&c2=010101&gt=l&gd=dbb
-*/
-  background: #283734;
-  background: linear-gradient(0deg, #283734, #010101);
+  background: #010101;
+  background: linear-gradient(180deg, #010101, #444444);
+  border: 2px solid #747574;
 }

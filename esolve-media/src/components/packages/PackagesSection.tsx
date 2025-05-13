@@ -83,7 +83,7 @@ export default function PackagesSection({
             ))}
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
           {packages.map((pkg) => (
             <PackageCard
               key={pkg.id}
@@ -93,7 +93,7 @@ export default function PackagesSection({
               features={pkg.features.map((f) => f.title)}
               ctaText={pkg.ctaText}
               customHeader={pkg.customHeader}
-              showMore={pkg.showMore}
+              showMore={pkg.showMore ?? false}
               onClick={() => handleCardClick(pkg.id)}
             />
           ))}

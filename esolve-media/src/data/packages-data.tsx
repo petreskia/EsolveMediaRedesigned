@@ -1,22 +1,5 @@
+import { PackageData } from "@/types/package-types";
 import type React from "react";
-
-interface Feature {
-  title: string;
-  description: string;
-  quantity?: string;
-}
-
-interface PackageData {
-  id: string;
-  title: string;
-  subtitle: string;
-  price?: string;
-  description?: string;
-  features: Feature[];
-  ctaText: string;
-  customHeader?: React.ReactNode;
-  showMore?: boolean;
-}
 
 // Personal Branding Packages
 export const personalBrandingPackages: PackageData[] = [
@@ -26,29 +9,30 @@ export const personalBrandingPackages: PackageData[] = [
     subtitle: "Begin your journey as a content creator",
     price: "1850",
     description:
-      "For new creators who want to get going with structured & strategic content. Personalized for your avatar, niche & offer.",
+      "For new creators who want to get going with structured & strategic content. Personalized for your avatar, niche & offer",
     features: [
       {
         title: "Strategic session",
         description:
-          "A focused session to assess content, define your value proposition, and outline clear next steps for client monetization—held at the end of each month.",
+          "A focused session to assess content, define your value proposition, and outline clear next steps for client monetization—held at the end of each month",
         quantity: "1x+1x",
       },
       {
         title: "Short form content",
         description:
-          "8 fully scripted, ready-to-film short form content pieces (hook, pattern interrupt, CTA/closer & post text). Professional post-production editing.",
+          "8 fully scripted, ready-to-film short form content pieces (hook, pattern interrupt, CTA/closer & post text). Professional post-production editing",
         quantity: "8x/month",
       },
       {
         title: "Funnel development",
-        description: "From lead magnet setup to sales funnel & lead capturing.",
+        description:
+          "Personally designed 1page funnel site for services & lead capturing",
         quantity: "1x",
       },
       {
         title: "Free resource development",
         description:
-          "Includes designing and developing a high-impact free resource to convert prospects into clients.",
+          "Hands-on structuring and developing 1x lead magnet/free resource to convert prospects into clients",
         quantity: "1x",
       },
       {
@@ -74,29 +58,55 @@ export const personalBrandingPackages: PackageData[] = [
       {
         title: "Short form content",
         description:
-          "Fully scripted, ready-to-film short form content pieces with professional editing.",
-        quantity: "8x/month",
+          "Fully scripted, ready-to-film short form content pieces with professional editing",
+        quantity: "18x/month",
       },
       {
-        title: "Advanced funnel development",
+        title: "Growth Dashboard",
         description:
-          "Comprehensive sales funnel with advanced features and optimization.",
+          "Comprehensive sales funnel with advanced features and optimization",
+        quantity: "",
+      },
+      {
+        title: "14 days boosted reel management (excluding ad spend)",
+        description:
+          "Strategic boosting and management of your reels for maximum reach and engagement",
         quantity: "1x",
-      },
-      {
-        title: "14 days boosted reel management",
-        description:
-          "Strategic boosting and management of your reels for maximum reach and engagement.",
-        quantity: "14 days",
       },
       {
         title: "Landing page design/redesign",
-        description: "Professional landing page optimized for conversions.",
+        description: "Professional landing page optimized for conversions",
         quantity: "1x",
+      },
+      {
+        title: "Funnel development +  onboarding 3-5 post-flow sequence",
+        description:
+          "Personally optimized funnel site for services & lead capturing",
+        quantity: "1x",
+      },
+      {
+        title: "1:1 workshop session (45 min)",
+        description: "Professional landing page optimized for conversions",
+        quantity: "1x",
+      },
+      {
+        title: "Up to 2x Lead Magnet/Free resource development",
+        description:
+          "Hands on structuring and developing up to 2x lead magnet/free resources to convert prospects into clients",
+        quantity: "2x",
+      },
+      {
+        title: "Weekly content review & email follow-up",
+        description: "Weekly in-depth status report & next steps",
+        quantity: "1x (weekly)",
+      },
+      {
+        title: "Slack priority support + Client hub",
+        description: "Access priority support from our team",
+        quantity: "",
       },
     ],
     ctaText: "Get it now",
-    showMore: true,
   },
   {
     id: "ai-outreach",
@@ -135,7 +145,6 @@ export const personalBrandingPackages: PackageData[] = [
       },
     ],
     ctaText: "Explore Packages",
-    showMore: true,
   },
   {
     id: "custom",
@@ -172,7 +181,6 @@ export const personalBrandingPackages: PackageData[] = [
       },
     ],
     ctaText: "Explore Services",
-    showMore: true,
   },
 ];
 
@@ -180,8 +188,10 @@ export const personalBrandingPackages: PackageData[] = [
 export const businessMarketingPackages: PackageData[] = [
   {
     id: "starter",
-    title: "Starter",
+    title: "STARTER",
     subtitle: "Get your business online – with zero fuss",
+    description:
+      "For small business owners, shops, service providers or creators who want a sleek, professional presence – without getting lost in tech",
     price: "949",
     features: [
       {
@@ -197,7 +207,7 @@ export const businessMarketingPackages: PackageData[] = [
       {
         title: "Contact Form Integration",
         description:
-          "Easy way for customers to reach you directly from your website.",
+          "Smart, branded contact form routed directly to your inbox",
         quantity: "1x",
       },
       {
@@ -208,7 +218,7 @@ export const businessMarketingPackages: PackageData[] = [
       },
       {
         title: "Client Portal + Slack Support",
-        description: "Dedicated support and collaboration space.",
+        description: "Async communication, shared folder for files & feedback",
         quantity: "",
       },
     ],
@@ -216,41 +226,48 @@ export const businessMarketingPackages: PackageData[] = [
   },
   {
     id: "growth-business",
-    title: "Growth",
+    title: "GROWTH Premium",
     subtitle: "From scattered presence to a system that sells",
+    description:
+      "For small, product-based or service businesses that want to move beyond having a passive online presence and build a simple but powerful digital system that drives action and builds trust",
     price: "1850",
     features: [
       {
         title: "Full WebPage Design/Redesign",
         description: "Comprehensive website design optimized for conversions.",
-        quantity: "1x",
+        quantity: "",
       },
       {
         title: "Visual Branding Kit",
         description:
           "Complete visual identity package for consistent branding.",
-        quantity: "1x",
+        quantity: "",
       },
       {
         title: "1x Lead Magnet Development",
         description: "High-value lead magnet to attract and convert prospects.",
-        quantity: "1x",
+        quantity: "",
       },
       {
         title: "Email Flow Setup",
         description:
           "Automated email sequences to nurture leads and drive sales.",
-        quantity: "1x",
+        quantity: "",
       },
       {
         title: "Mini CRM in Notion or Trello",
         description:
           "Customized CRM system to manage your customer relationships.",
-        quantity: "1x",
+        quantity: "",
+      },
+      {
+        title: "Client hub & async Slack support",
+        description:
+          "Customized CRM system to manage your customer relationships.",
+        quantity: "",
       },
     ],
     ctaText: "Get it now",
-    showMore: true,
   },
   {
     id: "ai-outreach-business",
@@ -289,7 +306,6 @@ export const businessMarketingPackages: PackageData[] = [
       },
     ],
     ctaText: "Explore Packages",
-    showMore: true,
   },
   {
     id: "custom-business",
@@ -326,6 +342,122 @@ export const businessMarketingPackages: PackageData[] = [
       },
     ],
     ctaText: "Explore Services",
-    showMore: true,
+  },
+];
+
+// Personal Branding Packages
+export const HyperPersonalizedAIPackages: PackageData[] = [
+  {
+    id: "trial",
+    title: "Trial",
+    subtitle: "3 month trial",
+    price: "700£ +200£ system fee",
+    features: [
+      {
+        title: "Email warm up",
+      },
+      {
+        title: "1000 prospects/month (1 email domain)",
+      },
+      {
+        title: "35 emails per day - 3-7 email sequence per prospect",
+      },
+      {
+        title: "Email only",
+      },
+    ],
+    ctaText: "Get it now",
+  },
+  {
+    id: "standard",
+    title: "Standard",
+    subtitle: "+200£ system fee",
+    price: "700",
+    features: [
+      {
+        title: "Email warm up",
+      },
+      {
+        title: "2500 prospects/month (2 email domain)",
+      },
+      {
+        title:
+          "83 emails per day - 3-7 email sequence per prospect + 4 Linkedin sequence per prospect",
+      },
+      {
+        title: "A/B testing",
+      },
+      {
+        title: "IG outreach (Up to 100 outreach)",
+      },
+    ],
+    ctaText: "Get it now",
+  },
+  {
+    id: "premium",
+    title: "Premium",
+    subtitle: "370£ system fee",
+    price: "2700",
+    features: [
+      {
+        title: "Email warm up",
+      },
+      {
+        title: "5000 prospects/month (3 email domain)",
+      },
+      {
+        title: "250 emails per day - 3-7 email sequence per prospect",
+      },
+      {
+        title: "A/B testing",
+      },
+      {
+        title: "Email/Linkedin (6 Linkedin outreaches)",
+      },
+      {
+        title: "Instagram outreach (100/month)",
+      },
+      {
+        title: "Branded chat bot + CRM",
+      },
+    ],
+    ctaText: "Get it now",
+  },
+  {
+    id: "elite",
+    title: "Elite",
+    subtitle: "+500£ system fee",
+    price: "5000",
+    features: [
+      {
+        title: "Email warm up",
+      },
+      {
+        title: "10 000 prospects per month",
+      },
+      {
+        title: "500 emails per business day (7 email domains needed)",
+      },
+      {
+        title: "A/B testing",
+      },
+      {
+        title:
+          "Email/Linkedin/Whatsapp (optional) (8 both for Linkedin & Whatsapp)",
+      },
+      {
+        title: "IG outreach (100)",
+      },
+      {
+        title: "Chatbot",
+      },
+      {
+        title: "Copywriter",
+      },
+      {
+        title: "Premium support",
+      },
+    ],
+    ctaText: "Get it now",
   },
 ];

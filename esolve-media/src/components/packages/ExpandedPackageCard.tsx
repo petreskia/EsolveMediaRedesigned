@@ -3,24 +3,7 @@
 import type React from "react";
 
 import { X } from "lucide-react";
-
-interface Feature {
-  title: string;
-  description: string;
-  quantity?: string;
-}
-
-interface PackageData {
-  id: string;
-  title: string;
-  subtitle: string;
-  price?: string;
-  description?: string;
-  features: Feature[];
-  ctaText: string;
-  customHeader?: React.ReactNode;
-  showMore?: boolean;
-}
+import { PackageData } from "@/types/package-types";
 
 interface ExpandedPackageCardProps {
   packageData: PackageData;
