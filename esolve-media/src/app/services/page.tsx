@@ -8,7 +8,7 @@ import {
   systemsServices,
   webDesignServices,
 } from "@/data/services-data";
-import WhatWeOffer from "@/components/ui/WhatWeOffer";
+import WhatYouWillReceive from "@/components/ui/what-you-will-recieve";
 
 export default function ServicesPage() {
   return (
@@ -21,7 +21,7 @@ export default function ServicesPage() {
         />
 
         {/* What we offer */}
-        <WhatWeOffer />
+        <WhatYouWillReceive />
 
         {/* Service Categories */}
         <ServiceCategory
