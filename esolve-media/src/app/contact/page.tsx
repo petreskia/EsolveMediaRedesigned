@@ -149,7 +149,7 @@ export default function ContactPage() {
 
   return (
     <main className="w-full mb-16 px-4 md:px-8 lg:px-16 bg-black">
-      <div className=" max-w-7xl mx-auto p-20">
+      <div className=" max-w-7xl mx-auto md:p-20">
         <SectionHeader
           heading="Contact"
           subheading="Tell us about your project and we will get back to you"
