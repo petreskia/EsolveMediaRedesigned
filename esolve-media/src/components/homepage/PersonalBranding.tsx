@@ -137,7 +137,7 @@ export default function PersonalBranding() {
     selectedOption === "Coaches/Consultants" ? coachesData : developersData;
 
   return (
-    <SectionContainer className="bg-gradient-to-b from-black to-neutral-900">
+    <SectionContainer>
       <SectionHeader
         heading="Personal Branding"
         subheading={`Coaches/Consultants & \n Brand developers`}

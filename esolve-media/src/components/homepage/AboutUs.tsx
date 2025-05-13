@@ -13,10 +13,10 @@ export default function AboutUs() {
   };
 
   return (
-    <SectionContainer className="bg-gradient-to-b from-black to-neutral-900">
+    <SectionContainer>
       {/* Header */}
       <SectionHeader
-        heading="ABOUT US"
+        heading="About us"
         subheading={`Expert teams.\nTailored to your mission.`}
       />
 

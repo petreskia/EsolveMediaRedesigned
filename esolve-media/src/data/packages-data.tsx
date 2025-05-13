@@ -6,7 +6,7 @@ export const personalBrandingPackages: PackageData[] = [
   {
     id: "build",
     title: "Build",
-    subtitle: "Begin your journey as a content creator",
+    subtitle: "Monetization starts here",
     price: "1850",
     description:
       "For new creators who want to get going with structured & strategic content. Personalized for your avatar, niche & offer",

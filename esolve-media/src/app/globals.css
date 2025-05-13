@@ -2,8 +2,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #ffffff;
+  --background: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,7 +15,7 @@
 }
 
 body {
-  background: var(--background);
+  background: black;
   color: var(--foreground);
   font-family: "Urbanist", Arial, Helvetica, sans-serif;
 }
@@ -54,4 +54,8 @@ body {
   background: #010101;
   background: linear-gradient(180deg, #010101, #444444);
   border: 2px solid #747574;
+}
+.custom-icon {
+  height: 180px;
+  width: 180px;
 }
