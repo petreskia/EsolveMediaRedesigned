@@ -1,5 +1,4 @@
 import { PackageData } from "@/types/package-types";
-import type React from "react";
 
 // Personal Branding Packages
 export const personalBrandingPackages: PackageData[] = [
@@ -149,7 +148,7 @@ export const personalBrandingPackages: PackageData[] = [
   {
     id: "custom",
     title: "Create your own custom package",
-    subtitle: "From scattered presence to a system that sells",
+    subtitle: "Explore and create your own package",
     customHeader: <div className="text-xl font-bold mt-6">Tailored to you</div>,
     features: [
       {

@@ -4,7 +4,7 @@ import SectionContainer from "../layouts/SectionContainer";
 import WhatWeOffer from "../ui/WhatWeOffer";
 import ToggleButton from "../ui/ToggleButton";
 import PricingGrid from "../packages/PackagesGrid";
-import PricingCard from "../packages/PricingCard";
+import PackageCard from "../packages/PackageCard";
 import SectionHeader from "../layouts/SectionHeader";
 import { personalBrandingPackages } from "@/data/packages-data";
 import BrandDevelopersSection from "./BrandDevelopersSection";
@@ -18,7 +18,10 @@ export default function PersonalBranding() {
     return acc;
   }, {} as Record<string, (typeof personalBrandingPackages)[0]>);
 
-  // Data for Brand Developers is now a separate component, as per your request
+  const handleButtonClick = () => {
+    // Logic for button click
+    window.location.href = "/packages";
+  };
 
   return (
     <SectionContainer>
@@ -36,21 +39,25 @@ export default function PersonalBranding() {
 
       {selectedOption === "Coaches/Consultants" ? (
         <PricingGrid>
-          <PricingCard
+          <PackageCard
             {...coachesData.build}
             features={coachesData.build.features.map((f) => f.title)}
+            onClick={handleButtonClick}
           />
-          <PricingCard
+          <PackageCard
             {...coachesData.growth}
             features={coachesData.growth.features.map((f) => f.title)}
+            onClick={handleButtonClick}
           />
-          <PricingCard
+          <PackageCard
             {...coachesData["ai-outreach"]}
             features={coachesData["ai-outreach"].features.map((f) => f.title)}
+            onClick={handleButtonClick}
           />
-          <PricingCard
+          <PackageCard
             {...coachesData.custom}
             features={coachesData.custom.features.map((f) => f.title)}
+            onClick={handleButtonClick}
           />
         </PricingGrid>
       ) : (

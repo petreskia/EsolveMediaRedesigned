@@ -27,7 +27,7 @@ export default function PackageCard({
   return (
     <div className="bg-neutral-900/90 rounded-3xl p-6 md:p-8 flex flex-col h-full">
       <div>
-        <h3 className="text-xl md:text-2xl font-bold">{title}</h3>
+        <h3 className="text-xl md:text-2xl font-bold uppercase">{title}</h3>
         <p className="text-sm md:text-base text-white/70 mt-1">{subtitle}</p>
 
         {customHeader ? (
@@ -44,7 +44,7 @@ export default function PackageCard({
       <div className="mt-auto pt-8">
         <button
           onClick={onClick}
-          className="w-full py-3 px-6 bg-teal-400/80 hover:bg-teal-400 text-black font-medium rounded-full transition-colors"
+          className="w-full py-3 px-6 bg-teal-400/80 hover:bg-teal-400 text-black font-medium rounded-full transition-colors cursor-pointer"
         >
           {ctaText}
         </button>

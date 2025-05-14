@@ -8,7 +8,6 @@ import SectionContainer from "../layouts/SectionContainer";
 export default function AboutUs() {
   // Function to handle button click
   const handleButtonClick = () => {
-    // Logic for button click
     window.location.href = "/contact";
   };
 
@@ -57,7 +56,7 @@ export default function AboutUs() {
 
       {/* Image */}
       <div className="mt-16 md:mt-20 lg:mt-24">
-        <div className="relative w-full aspect-[16/9] lg:h-[900px] xl:h-[1200px]">
+        <div className="relative w-full aspect-[16/9] xl:h-[900px]">
           <Image
             src="/images/Eskil.jpg"
             alt="Co-Founder"

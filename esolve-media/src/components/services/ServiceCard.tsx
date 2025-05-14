@@ -31,12 +31,12 @@ export default function ServiceCard({
       </div>
 
       {/* Center large icon */}
-      <div className="flex-grow flex items-center justify-center py-12">
+      <div className="flex-grow flex items-center justify-center py-10">
         <Image
           src={`/icons/bg-icons/${iconName}.svg`}
           alt={`${title} large icon`}
-          width={220}
-          height={220}
+          width={200}
+          height={200}
           className="object-contain"
         />
       </div>

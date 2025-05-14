@@ -2,9 +2,10 @@ import { withId } from "@/utils/withId";
 
 export const webDesignServices = withId([
   {
-    title: "Hosting or handover",
-    description: "Secure hosting and a seamless handover–fully ready to go.",
-    iconName: "hosting",
+    title: "Coding complex websites from scratch",
+    description:
+      "Clean code, no templates, built for performance and flexibility.",
+    iconName: "coding-complex-websites",
   },
   {
     title: "Funnels",
@@ -25,10 +26,9 @@ export const webDesignServices = withId([
     iconName: "community-platforms",
   },
   {
-    title: "Coding complex websites from scratch",
-    description:
-      "Clean code, no templates, built for performance and flexibility.",
-    iconName: "coding-complex-websites",
+    title: "Hosting or handover",
+    description: "Secure hosting and a seamless handover–fully ready to go.",
+    iconName: "hosting",
   },
   {
     title: "Analytic tools/ SEO optimization",
