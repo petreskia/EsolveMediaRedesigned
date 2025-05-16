@@ -4,6 +4,7 @@ import { useState } from "react";
 import {
   personalBrandingPackages,
   businessMarketingPackages,
+  hyperPersonalizedAIPackages,
 } from "../../data/packages-data";
 import ExpandedPackageCard from "./ExpandedPackageCard";
 import DiscoveryCallModal from "./DiscoveryCallModal";
@@ -12,7 +13,10 @@ import PackageCard from "./PackageCard";
 interface PackagesSectionProps {
   title?: string;
   subtitle?: string;
-  category: "personal-branding" | "business-marketing";
+  category:
+    | "personal-branding"
+    | "business-marketing"
+    | "hyper-personalized-ai";
   isStandalonePage?: boolean; // ← New optional prop
 }
 
@@ -28,9 +32,23 @@ export default function PackagesSection({
   const packages =
     category === "personal-branding"
       ? personalBrandingPackages
-      : businessMarketingPackages;
+      : category === "business-marketing"
+      ? businessMarketingPackages
+      : hyperPersonalizedAIPackages;
 
   const handleCardClick = (packageId: string) => {
+    // Redirect to specific pages based on package ID
+    if (packageId === "ai-outreach") {
+      window.location.href = "/hyper-personalized-ai-outreach";
+      return;
+    }
+  
+
+    if (packageId === "custom-package") {
+      window.location.href = "/create-your-own-custom-package";
+      return;
+    }
+    // Default behavior
     if (isStandalonePage) {
       setExpandedPackage(packageId);
     } else {

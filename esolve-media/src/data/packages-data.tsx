@@ -146,7 +146,7 @@ export const personalBrandingPackages: PackageData[] = [
     ctaText: "Explore Packages",
   },
   {
-    id: "custom",
+    id: "custom-package",
     title: "Create your own custom package",
     subtitle: "Explore and create your own package",
     customHeader: <div className="text-xl font-bold mt-6">Tailored to you</div>,
@@ -269,7 +269,7 @@ export const businessMarketingPackages: PackageData[] = [
     ctaText: "Get it now",
   },
   {
-    id: "ai-outreach-business",
+    id: "ai-outreach",
     title: "Hyper Personalized AI outreach",
     subtitle: "AI-powered outreach tailored to each lead",
     customHeader: <div className="text-xl font-bold mt-6">Package based</div>,
@@ -307,7 +307,7 @@ export const businessMarketingPackages: PackageData[] = [
     ctaText: "Explore Packages",
   },
   {
-    id: "custom-business",
+    id: "custom-package",
     title: "Create your own custom package",
     subtitle: "From scattered presence to a system that sells",
     customHeader: <div className="text-xl font-bold mt-6">Tailored to you</div>,
@@ -345,7 +345,7 @@ export const businessMarketingPackages: PackageData[] = [
 ];
 
 // Personal Branding Packages
-export const HyperPersonalizedAIPackages: PackageData[] = [
+export const hyperPersonalizedAIPackages: PackageData[] = [
   {
     id: "trial",
     title: "Trial",
