@@ -37,7 +37,7 @@ export default function ServicesPage() {
         <ServiceCategory
           title="Systems & automations"
           services={systemsServices}
-          showProcessToggle
+          showProcessToggle={true} // only this one shows extra content
         />
 
         <ServiceCategory

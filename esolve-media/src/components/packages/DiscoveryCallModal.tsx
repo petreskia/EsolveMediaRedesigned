@@ -2,12 +2,7 @@
 
 import { useState } from "react";
 import { X } from "lucide-react";
-
-interface AdditionalService {
-  id: string;
-  title: string;
-  description: string;
-}
+import { AdditionalService } from "@/data/pop-up-data";
 
 export default function DiscoveryCallModal({
   onClose,

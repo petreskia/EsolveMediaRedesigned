@@ -12,7 +12,7 @@ export default function AboutUs() {
   };
 
   return (
-    <>
+    <div id="about-us-section">
       <SectionContainer>
         {/* Header */}
         <SectionHeader
@@ -74,6 +74,6 @@ export default function AboutUs() {
           </h3>
         </div>
       </div>
-    </>
+    </div>
   );
 }
