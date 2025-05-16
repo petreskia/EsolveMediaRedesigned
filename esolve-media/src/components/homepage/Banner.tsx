@@ -3,10 +3,20 @@ import Image from "next/image";
 
 export default function Banner() {
   const scrollToNextSection = () => {
-    // Smooth scroll to the next section
     const nextSection = document.getElementById("about-us-section");
     if (nextSection) {
-      nextSection.scrollIntoView({ behavior: "smooth" });
+      // Get the navbar height to offset the scroll position
+      const navbar = document.querySelector("nav");
+      const navbarHeight = navbar ? navbar.offsetHeight : 80; // Default to 80px if navbar not found
+
+      const sectionTop =
+        nextSection.getBoundingClientRect().top + window.pageYOffset;
+
+      // Scroll to section minus navbar height
+      window.scrollTo({
+        top: sectionTop - navbarHeight,
+        behavior: "smooth",
+      });
     }
   };
 
