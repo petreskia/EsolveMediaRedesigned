@@ -42,7 +42,7 @@ import {
 import {
   personalBrandingPackages,
   businessMarketingPackages,
-  HyperPersonalizedAIPackages,
+  hyperPersonalizedAIPackages,
 } from "@/data/packages-data";
 import type { PackageData } from "@/types/package-types";
 import SectionHeader from "@/components/layouts/SectionHeader";
@@ -141,7 +141,7 @@ export default function ContactPage() {
       case "business-marketing":
         return businessMarketingPackages;
       case "ai-outreach":
-        return HyperPersonalizedAIPackages;
+        return hyperPersonalizedAIPackages;
       default:
         return [];
     }
