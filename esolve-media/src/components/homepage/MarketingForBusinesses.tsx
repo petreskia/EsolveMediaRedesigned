@@ -13,8 +13,8 @@ export default function MarketingForBusinesses() {
 
       <WhatWeOffer />
 
-      {/* Personal Branding Section */}
-      <PackagesSection category="personal-branding" />
+      {/* Marketing for businesses packages */}
+      <PackagesSection category="business-marketing" isStandalonePage={false} />
     </SectionContainer>
   );
 }

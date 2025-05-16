@@ -13,12 +13,14 @@ interface PackagesSectionProps {
   title?: string;
   subtitle?: string;
   category: "personal-branding" | "business-marketing";
+  isStandalonePage?: boolean; // ← New optional prop
 }
 
 export default function PackagesSection({
   title,
   subtitle,
   category,
+  isStandalonePage = false,
 }: PackagesSectionProps) {
   const [expandedPackage, setExpandedPackage] = useState<string | null>(null);
   const [showModal, setShowModal] = useState(false);
@@ -29,7 +31,11 @@ export default function PackagesSection({
       : businessMarketingPackages;
 
   const handleCardClick = (packageId: string) => {
-    setExpandedPackage(packageId);
+    if (isStandalonePage) {
+      setExpandedPackage(packageId);
+    } else {
+      window.location.href = "/packages";
+    }
   };
 
   const handleCloseExpanded = () => {
