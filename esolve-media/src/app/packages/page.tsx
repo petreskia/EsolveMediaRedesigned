@@ -20,6 +20,7 @@ export default function PackagesPage() {
           title="Personal Branding"
           subtitle="Coaches/Consultants"
           category="personal-branding"
+          isStandalonePage={true}
         />
 
         {/* Marketing for Businesses Section */}
@@ -27,6 +28,7 @@ export default function PackagesPage() {
           title="Marketing for Businesses"
           subtitle=""
           category="business-marketing"
+          isStandalonePage={true}
         />
       </div>
     </main>

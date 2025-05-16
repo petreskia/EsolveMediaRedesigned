@@ -27,17 +27,19 @@ export default function ServicesPage() {
         <ServiceCategory
           title="Web Design, Funnels & Platform Development"
           services={webDesignServices}
+          showPortfolioButton={true}
         />
 
         <ServiceCategory
           title="Graphic Design & Branding"
           services={graphicDesignServices}
+          showPortfolioButton={true}
         />
 
         <ServiceCategory
           title="Systems & automations"
           services={systemsServices}
-          showProcessToggle={true} // only this one shows extra content
+          showProcessToggle={true}
         />
 
         <ServiceCategory

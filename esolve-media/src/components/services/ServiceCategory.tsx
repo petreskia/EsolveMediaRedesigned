@@ -10,12 +10,14 @@ interface ServiceCategoryProps {
   title: string;
   services: Service[];
   showProcessToggle?: boolean;
+  showPortfolioButton?: boolean;
 }
 
 export default function ServiceCategory({
   title,
   services,
   showProcessToggle = false,
+  showPortfolioButton = false,
 }: ServiceCategoryProps) {
   const handleButtonClick = () => {
     window.location.href = "/process";
@@ -42,6 +44,15 @@ export default function ServiceCategory({
             className="flex items-center justify-center mx-auto mt-8 py-3 px-6 bg-teal-400/80 hover:bg-teal-400 text-black font-medium rounded-full transition-colors"
           />
         </>
+      )}
+      {showPortfolioButton && (
+        <Button
+          text={"Request portfolio access"}
+          onClick={() => {
+            window.location.href = "/portfolio-request"; // suggested route
+          }}
+          className="flex items-center justify-center mx-auto mt-8 py-3 px-6 bg-teal-400/80 hover:bg-teal-400 text-black font-medium rounded-full transition-colors"
+        />
       )}
     </section>
   );
