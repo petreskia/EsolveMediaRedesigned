@@ -42,10 +42,9 @@ export default function PackagesSection({
       window.location.href = "/hyper-personalized-ai-outreach";
       return;
     }
-  
 
     if (packageId === "custom-package") {
-      window.location.href = "/create-your-own-custom-package";
+      window.location.href = "/create-your-package";
       return;
     }
     // Default behavior
