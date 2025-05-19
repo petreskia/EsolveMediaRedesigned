@@ -391,7 +391,7 @@ export const hyperPersonalizedAIPackages: PackageData[] = [
         title: "Professional copywriting",
       },
       {
-        title: "IAdditional social media outreach",
+        title: "Additional social media outreach",
       },
     ],
     ctaText: "Get it now",
