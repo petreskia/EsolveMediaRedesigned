@@ -22,9 +22,7 @@ export default function FeatureList({
       ))}
 
       {!showMore && hiddenCount > 0 && (
-        <li className="text-sm text-white/70 pl-7">
-          and {hiddenCount} more...
-        </li>
+        <li className="text-sm text-white/70 pl-7">And more...</li>
       )}
     </ul>
   );

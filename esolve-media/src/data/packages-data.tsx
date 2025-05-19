@@ -348,18 +348,21 @@ export const businessMarketingPackages: PackageData[] = [
 export const hyperPersonalizedAIPackages: PackageData[] = [
   {
     id: "trial",
-    title: "Trial (3 month trial)",
+    title: "Trial",
     subtitle: "+200$ system fee",
-    price: "699",
+    price: "1395",
     features: [
       {
-        title: "Email warm up",
+        title: "Spam folder prohibitor integration",
       },
       {
-        title: "1000 prospects/month (1 email domain)",
+        title: "1000 qualified prospects/month",
       },
       {
-        title: "35 emails per day - 3-7 email sequence per prospect",
+        title: "Email flow + follow up",
+      },
+      {
+        title: "Professional copywriting",
       },
       {
         title: "Email only",
@@ -371,23 +374,22 @@ export const hyperPersonalizedAIPackages: PackageData[] = [
     id: "standard",
     title: "Standard",
     subtitle: "+200$ system fee",
-    price: "1497",
+    price: "2395",
     features: [
       {
-        title: "Email warm up",
+        title: "Spam folder prohibitor integration",
       },
       {
-        title: "2500 prospects/month (2 email domain)",
+        title: "2500 qualified prospects/month + A/B testing",
       },
       {
-        title:
-          "83 emails per day - 3-7 email sequence per prospect + 4 Linkedin sequence per prospect",
+        title: "Email flow + follow up",
       },
       {
-        title: "A/B testing",
+        title: "Professional copywriting",
       },
       {
-        title: "IG outreach (Up to 100 outreach)",
+        title: "IAdditional social media outreach",
       },
     ],
     ctaText: "Get it now",
@@ -396,22 +398,22 @@ export const hyperPersonalizedAIPackages: PackageData[] = [
     id: "premium",
     title: "Premium",
     subtitle: "370$ system fee",
-    price: "2699",
+    price: "3395",
     features: [
       {
-        title: "Email warm up",
+        title: "Spam folder prohibitor integration",
       },
       {
-        title: "5000 prospects/month (3 email domain)",
+        title: "5000 qualified prospects/month + A/B testing",
       },
       {
-        title: "250 emails per day - 3-7 email sequence per prospect",
+        title: "Email flow + follow up",
       },
       {
-        title: "A/B testing",
+        title: "Professional copywriting",
       },
       {
-        title: "Email/Linkedin (6 Linkedin outreaches)",
+        title: "Additional social media outreach",
       },
       {
         title: "Instagram outreach (100/month)",
@@ -426,7 +428,7 @@ export const hyperPersonalizedAIPackages: PackageData[] = [
     id: "elite",
     title: "Elite",
     subtitle: "",
-    price: "4990",
+    price: "5495",
     fees: "500",
     features: [
       {
