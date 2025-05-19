@@ -113,6 +113,7 @@ export default function PackagesSection({
               title={pkg.title}
               subtitle={pkg.subtitle}
               price={pkg.price}
+              fees={pkg.fees}
               features={pkg.features.map((f) => f.title)}
               ctaText={pkg.ctaText}
               customHeader={pkg.customHeader}

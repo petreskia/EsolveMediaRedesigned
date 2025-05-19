@@ -349,8 +349,9 @@ export const hyperPersonalizedAIPackages: PackageData[] = [
   {
     id: "trial",
     title: "Trial",
-    subtitle: "+200$ system fee",
+    subtitle: "",
     price: "1395",
+    fees: "$200 system fee",
     features: [
       {
         title: "Spam folder prohibitor integration",
@@ -373,8 +374,9 @@ export const hyperPersonalizedAIPackages: PackageData[] = [
   {
     id: "standard",
     title: "Standard",
-    subtitle: "+200$ system fee",
+    subtitle: "",
     price: "2395",
+    fees: "$200 system fee",
     features: [
       {
         title: "Spam folder prohibitor integration",
@@ -397,8 +399,9 @@ export const hyperPersonalizedAIPackages: PackageData[] = [
   {
     id: "premium",
     title: "Premium",
-    subtitle: "370$ system fee",
+    subtitle: "",
     price: "3395",
+    fees: "$370 system fee",
     features: [
       {
         title: "Spam folder prohibitor integration",
@@ -429,7 +432,7 @@ export const hyperPersonalizedAIPackages: PackageData[] = [
     title: "Elite",
     subtitle: "",
     price: "5495",
-    fees: "500",
+    fees: "$500 system fee",
     features: [
       {
         title: "Email warm up",

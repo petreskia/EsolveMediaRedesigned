@@ -7,6 +7,7 @@ interface PackageCardProps {
   title: string;
   subtitle: string;
   price?: string;
+  fees?: string;
   features: string[];
   ctaText: string;
   showMore?: boolean;
@@ -18,6 +19,7 @@ export default function PackageCard({
   title,
   subtitle,
   price,
+  fees,
   features,
   ctaText,
   showMore = false,
@@ -33,9 +35,18 @@ export default function PackageCard({
         {customHeader ? (
           <div className="mt-6">{customHeader}</div>
         ) : (
-          price && (
-            <div className="text-3xl md:text-4xl font-bold mt-6">${price}</div>
-          )
+          <div className="flex items-baseline gap-4 mt-6">
+            {price && (
+              <div className="text-3xl md:text-4xl font-bold mt-6">
+                ${price}
+              </div>
+            )}
+            {fees && (
+              <p className="text-sm md:text-base text-white/60 mt-1">
+                + {fees}
+              </p>
+            )}
+          </div>
         )}
       </div>
 
