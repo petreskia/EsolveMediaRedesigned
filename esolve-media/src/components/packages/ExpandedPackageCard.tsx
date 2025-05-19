@@ -17,7 +17,7 @@ export default function ExpandedPackageCard({
   onBookCall,
 }: ExpandedPackageCardProps) {
   return (
-    <div className="bg-neutral-900/90 rounded-3xl p-6 md:p-8 relative">
+    <div className="bg-custom-gradient-card rounded-3xl p-6 md:p-8 relative">
       {/* Close button */}
       <button
         onClick={onClose}

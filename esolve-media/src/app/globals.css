@@ -13,6 +13,8 @@
     --text-7xl: 70px;
     --text-green-300: #85c1be;
     --bg-gray-30: #747574;
+    --bg-teal-300:
+    --bg-green-200: #314544
   }
 }
 
@@ -45,10 +47,6 @@ body {
 }
 
 .bg-custom-gradient {
-  /*
-* Created with https://www.css-gradient.com
-* Gradient link: https://www.css-gradient.com/?c1=385752&c2=010101&gt=r&gd=dtt
-*/
   background: #385752;
   background: radial-gradient(at center top, #385752, #010101);
 }
@@ -72,4 +70,30 @@ body {
 }
 .border-green {
   border: 1px solid #85c1be;
+}
+.active {
+  color: green;
+}
+.services-btn {
+  background: #e6e8e6;
+  background: linear-gradient(90deg, #636463, #5d5e5d);
+  border: 1px solid #747574;
+  color: #e6e8e6;
+  font-weight: 200;
+}
+.services-btn:hover {
+  background: #e6e8e6;
+  color: black;
+}
+.small-icon-green {
+  background-color: #314544;
+  border:1px solid #85C1BE;
+}
+.packages-btn {
+  background-color: #85C1BE;
+}
+.packages-btn:hover {
+  background-color: white;
+  color: black;
+  transition: ease-in-out 0.3s;
 }

@@ -41,7 +41,7 @@ export default function ServiceCategory({
           <Button
             text={"See the process"}
             onClick={handleButtonClick}
-            className="flex items-center justify-center mx-auto mt-8 py-3 px-6 bg-teal-400/80 hover:bg-teal-400 text-black font-medium rounded-full transition-colors"
+            className="flex items-center justify-center mx-auto mt-8 py-3 px-20 rounded-full services-btn"
           />
         </>
       )}
@@ -51,7 +51,7 @@ export default function ServiceCategory({
           onClick={() => {
             window.location.href = "/portfolio-request"; // suggested route
           }}
-          className="flex items-center justify-center mx-auto mt-8 py-3 px-6 bg-teal-400/80 hover:bg-teal-400 text-black font-medium rounded-full transition-colors"
+          className="flex items-center justify-center mx-auto mt-8 py-3 px-6 services-btn font-extralight rounded-full"
         />
       )}
     </section>

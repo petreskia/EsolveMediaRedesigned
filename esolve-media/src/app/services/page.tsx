@@ -2,7 +2,7 @@ import ServiceCategory from "@/components/services/ServiceCategory";
 import SectionHeader from "@/components/layouts/SectionHeader";
 import {
   graphicDesignServices,
-  leadGenServices,
+  hyperPersonalizedServices,
   managementServices,
   shortFormServices,
   systemsServices,
@@ -43,13 +43,15 @@ export default function ServicesPage() {
         />
 
         <ServiceCategory
-          title="Lead generation & outbound sales"
-          services={leadGenServices}
+          title="Hyper Personalized AI outreach"
+          services={hyperPersonalizedServices}
+          showPortfolioButton={true}
         />
 
         <ServiceCategory
           title="Short form content"
           services={shortFormServices}
+          showPortfolioButton={true}
         />
 
         <ServiceCategory title="Management" services={managementServices} />

@@ -92,59 +92,40 @@ export const systemsServices = withId([
   },
 ]);
 
-export const leadGenServices = withId([
+export const hyperPersonalizedServices = withId([
   {
-    title: "Coding complex websites from scratch",
+    title: "ICP development & Lead list generation",
     description:
-      "Clean code, no templates, built for performance and flexibility.",
-    iconName: "coding-complex-websites",
+      "Market research, pain points, ICP development & Building qualified lead lists.",
+    iconName: "ICP",
   },
   {
-    title: "Funnels",
+    title: "Copywriting",
     description:
-      "We build funnels–strategic, scalable, and tailored to your goals.",
-    iconName: "funnels",
+      "Finding the ideal outreach messaging - offer & CTA towards ICP.",
+    iconName: "copywriting",
   },
   {
-    title: "Platform development",
-    description:
-      "Designed for growth, performance, and seamless user experience.",
-    iconName: "platform-development",
+    title: "Email domain verification & spam prevention",
+    description: "Multi-platform domain verification to avoid spam folders.",
+    iconName: "email-flow-set-up",
   },
   {
-    title: "Community platforms",
+    title: "A/B testing & Analytic review",
     description:
-      "Built to connect, scale and grow with your audience - pre built or made from scratch.",
-    iconName: "community-platforms",
+      "Optimize campaigns through A/B testing and performance analysis.",
+    iconName: "ab-testing",
   },
   {
-    title: "Pre set platforms",
-    description: "We set up and customize pre-built community platforms",
-    iconName: "pre-set-platforms",
+    title: "Follow up, Management & Nurture",
+    description: "Email sequences with response-based adjustments.",
+    iconName: "follow-up-management",
   },
   {
-    title: "Analytic tools/ SEO optimization",
+    title: "Social media outreach",
     description:
-      "We optimize SEO and create analytics tools—boosting insights and traffic.",
-    iconName: "analytic-tools",
-  },
-  {
-    title: "Coding complex websites from scratch",
-    description:
-      "Clean code, no templates, built for performance and flexibility.",
-    iconName: "coding-complex-websites",
-  },
-  {
-    title: "Funnels",
-    description:
-      "We build funnels–strategic, scalable, and tailored to your goals.",
-    iconName: "funnels",
-  },
-  {
-    title: "Platform development",
-    description:
-      "Designed for growth, performance, and seamless user experience.",
-    iconName: "platform-development",
+      "Instagram, LinkedIn & WhatsApp outreach with tailored copy and leads.",
+    iconName: "social-media-management",
   },
 ]);
 

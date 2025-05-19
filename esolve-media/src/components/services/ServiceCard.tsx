@@ -19,7 +19,7 @@ export default function ServiceCard({
     >
       {/* Top-left small icon */}
       <div className="absolute top-3 left-3">
-        <div className="w-14 h-14 rounded-full bg-teal-300/40 flex items-center justify-center">
+        <div className="w-14 h-14 rounded-full small-icon-green flex items-center justify-center">
           <Image
             src={`/icons/small-icons/${iconName}.svg`}
             alt={`${title} small icon`}

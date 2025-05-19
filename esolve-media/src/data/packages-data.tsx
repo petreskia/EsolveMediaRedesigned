@@ -348,9 +348,9 @@ export const businessMarketingPackages: PackageData[] = [
 export const hyperPersonalizedAIPackages: PackageData[] = [
   {
     id: "trial",
-    title: "Trial",
-    subtitle: "3 month trial",
-    price: "700£ +200£ system fee",
+    title: "Trial (3 month trial)",
+    subtitle: "+200$ system fee",
+    price: "699",
     features: [
       {
         title: "Email warm up",
@@ -370,8 +370,8 @@ export const hyperPersonalizedAIPackages: PackageData[] = [
   {
     id: "standard",
     title: "Standard",
-    subtitle: "+200£ system fee",
-    price: "700",
+    subtitle: "+200$ system fee",
+    price: "1497",
     features: [
       {
         title: "Email warm up",
@@ -395,8 +395,8 @@ export const hyperPersonalizedAIPackages: PackageData[] = [
   {
     id: "premium",
     title: "Premium",
-    subtitle: "370£ system fee",
-    price: "2700",
+    subtitle: "370$ system fee",
+    price: "2699",
     features: [
       {
         title: "Email warm up",
@@ -425,8 +425,9 @@ export const hyperPersonalizedAIPackages: PackageData[] = [
   {
     id: "elite",
     title: "Elite",
-    subtitle: "+500£ system fee",
-    price: "5000",
+    subtitle: "",
+    price: "4990",
+    fees: "500",
     features: [
       {
         title: "Email warm up",

@@ -12,7 +12,7 @@ export default function SectionHeader({
       <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold uppercase whitespace-pre-line">
         {heading}
       </h2>
-      <p className="text-lg md:text-xl lg:text-3xl whitespace-pre-line text-white/70 max-w-xs md:max-w-sm lg:max-w-md md:text-end">
+      <p className="text-lg md:text-xl lg:text-2xl whitespace-pre-line text-white/70 max-w-xs md:max-w-sm lg:max-w-md md:text-end leading-6">
         {subheading}
       </p>
     </div>

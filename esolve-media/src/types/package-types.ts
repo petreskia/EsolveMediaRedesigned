@@ -9,6 +9,7 @@ export interface PackageData {
   title: string;
   subtitle: string;
   price?: string;
+  fees?: string;
   description?: string;
   features: Feature[];
   ctaText: string;

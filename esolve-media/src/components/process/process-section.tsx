@@ -4,13 +4,12 @@ import { Check } from "lucide-react";
 
 export default function ProcessSection() {
   return (
-    <div className="w-full bg-gradient-to-b from-[#0a1520] to-[#0d1f2d] text-white min-h-screen">
+    <div className="w-full bg-gradient-to-b from-[#000000] to-[#000000] text-white min-h-screen">
       <div className="max-w-5xl mx-auto px-4 py-16 md:py-24">
         {/* Header */}
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-16 md:mb-24">
           The Process
         </h1>
-
         {/* Process Steps */}
         <div className="space-y-8 md:space-y-16">
           {/* Step 1 */}
@@ -29,7 +28,6 @@ export default function ProcessSection() {
                 inefficiencies and areas where AI & automation can create actual
                 value.
               </p>
-
               <div>
                 <h3 className="text-xl font-medium mb-4">What We Do</h3>
                 <ul className="space-y-3">
@@ -53,7 +51,6 @@ export default function ProcessSection() {
               </div>
             </div>
           </div>
-
           {/* Step 2 */}
           <div className="bg-[#111a25] rounded-lg p-8 md:p-10 flex flex-col md:flex-row gap-6 md:gap-10 transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(77,181,255,0.15)] hover:bg-[#131d29]">
             <div className="flex-shrink-0 flex items-start">
