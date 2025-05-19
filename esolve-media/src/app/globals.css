@@ -71,9 +71,7 @@ body {
 .border-green {
   border: 1px solid #85c1be;
 }
-.active {
-  color: green;
-}
+
 .services-btn {
   background: #e6e8e6;
   background: linear-gradient(90deg, #636463, #5d5e5d);

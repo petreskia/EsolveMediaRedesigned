@@ -13,9 +13,9 @@ export default function ProcessSection() {
         {/* Process Steps */}
         <div className="space-y-8 md:space-y-16">
           {/* Step 1 */}
-          <div className="bg-[#111a25] rounded-lg p-8 md:p-10 flex flex-col md:flex-row gap-6 md:gap-10 transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(77,181,255,0.15)] hover:bg-[#131d29]">
+          <div className="bg-custom-gradient-card rounded-lg p-8 md:p-10 flex flex-col md:flex-row gap-6 md:gap-10 transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(77,181,255,0.15)] hover:bg-[#131d29]">
             <div className="flex-shrink-0 flex items-start">
-              <div className="w-16 h-16 rounded-full bg-[#1a2c3d] flex items-center justify-center text-[#4db5ff] text-3xl font-bold transition-all duration-300 group-hover:bg-[#1e3249]">
+              <div className="w-16 h-16 rounded-full small-icon-green flex items-center justify-center custom-green text-3xl font-bold transition-all duration-300">
                 1
               </div>
             </div>
@@ -32,19 +32,19 @@ export default function ProcessSection() {
                 <h3 className="text-xl font-medium mb-4">What We Do</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-2">
-                    <Check className="text-[#4db5ff] mt-1 h-5 w-5 flex-shrink-0" />
+                    <Check className="custom-green mt-1 h-5 w-5 flex-shrink-0" />
                     <span>Review and analysis of current processes</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Check className="text-[#4db5ff] mt-1 h-5 w-5 flex-shrink-0" />
+                    <Check className="custom-green mt-1 h-5 w-5 flex-shrink-0" />
                     <span>Identification of automation opportunities</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Check className="text-[#4db5ff] mt-1 h-5 w-5 flex-shrink-0" />
+                    <Check className="custom-green mt-1 h-5 w-5 flex-shrink-0" />
                     <span>Audit of current systems and processes</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Check className="text-[#4db5ff] mt-1 h-5 w-5 flex-shrink-0" />
+                    <Check className="custom-green mt-1 h-5 w-5 flex-shrink-0" />
                     <span>Strategic plan development</span>
                   </li>
                 </ul>
@@ -52,9 +52,9 @@ export default function ProcessSection() {
             </div>
           </div>
           {/* Step 2 */}
-          <div className="bg-[#111a25] rounded-lg p-8 md:p-10 flex flex-col md:flex-row gap-6 md:gap-10 transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(77,181,255,0.15)] hover:bg-[#131d29]">
+          <div className="bg-custom-gradient-card rounded-lg p-8 md:p-10 flex flex-col md:flex-row gap-6 md:gap-10 transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(77,181,255,0.15)] hover:bg-[#131d29]">
             <div className="flex-shrink-0 flex items-start">
-              <div className="w-16 h-16 rounded-full bg-[#1a2c3d] flex items-center justify-center text-[#4db5ff] text-3xl font-bold">
+              <div className="w-16 h-16 rounded-full small-icon-green flex items-center justify-center custom-green text-3xl font-bold transition-all duration-300">
                 2
               </div>
             </div>
@@ -71,15 +71,15 @@ export default function ProcessSection() {
                 <h3 className="text-xl font-medium mb-4">What We Do</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-2">
-                    <Check className="text-[#4db5ff] mt-1 h-5 w-5 flex-shrink-0" />
+                    <Check className="custom-green mt-1 h-5 w-5 flex-shrink-0" />
                     <span>Solution architecture development</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Check className="text-[#4db5ff] mt-1 h-5 w-5 flex-shrink-0" />
+                    <Check className="custom-green mt-1 h-5 w-5 flex-shrink-0" />
                     <span>Selection of optimal AI automation technologies</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Check className="text-[#4db5ff] mt-1 h-5 w-5 flex-shrink-0" />
+                    <Check className="custom-green mt-1 h-5 w-5 flex-shrink-0" />
                     <span>Integration planning with existing systems</span>
                   </li>
                 </ul>
@@ -88,9 +88,9 @@ export default function ProcessSection() {
           </div>
 
           {/* Step 3 */}
-          <div className="bg-[#111a25] rounded-lg p-8 md:p-10 flex flex-col md:flex-row gap-6 md:gap-10 transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(77,181,255,0.15)] hover:bg-[#131d29]">
+          <div className="bg-custom-gradient-card rounded-lg p-8 md:p-10 flex flex-col md:flex-row gap-6 md:gap-10 transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(77,181,255,0.15)] hover:bg-[#131d29]">
             <div className="flex-shrink-0 flex items-start">
-              <div className="w-16 h-16 rounded-full bg-[#1a2c3d] flex items-center justify-center text-[#4db5ff] text-3xl font-bold">
+              <div className="w-16 h-16 rounded-full small-icon-green flex items-center justify-center custom-green text-3xl font-bold transition-all duration-300">
                 3
               </div>
             </div>
@@ -107,19 +107,19 @@ export default function ProcessSection() {
                 <h3 className="text-xl font-medium mb-4">What We Do</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-2">
-                    <Check className="text-[#4db5ff] mt-1 h-5 w-5 flex-shrink-0" />
+                    <Check className="custom-green mt-1 h-5 w-5 flex-shrink-0" />
                     <span>Performance monitoring and optimization</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Check className="text-[#4db5ff] mt-1 h-5 w-5 flex-shrink-0" />
+                    <Check className="custom-green mt-1 h-5 w-5 flex-shrink-0" />
                     <span>Continuous improvement of AI models</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Check className="text-[#4db5ff] mt-1 h-5 w-5 flex-shrink-0" />
+                    <Check className="custom-green mt-1 h-5 w-5 flex-shrink-0" />
                     <span>Expansion to additional business processes</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Check className="text-[#4db5ff] mt-1 h-5 w-5 flex-shrink-0" />
+                    <Check className="custom-green mt-1 h-5 w-5 flex-shrink-0" />
                     <span>ROI tracking and reporting</span>
                   </li>
                 </ul>
@@ -128,9 +128,9 @@ export default function ProcessSection() {
           </div>
 
           {/* Step 4 */}
-          <div className="bg-[#111a25] rounded-lg p-8 md:p-10 flex flex-col md:flex-row gap-6 md:gap-10 transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(77,181,255,0.15)] hover:bg-[#131d29]">
+          <div className="bg-custom-gradient-card rounded-lg p-8 md:p-10 flex flex-col md:flex-row gap-6 md:gap-10 transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(77,181,255,0.15)] hover:bg-[#131d29]">
             <div className="flex-shrink-0 flex items-start">
-              <div className="w-16 h-16 rounded-full bg-[#1a2c3d] flex items-center justify-center text-[#4db5ff] text-3xl font-bold">
+              <div className="w-16 h-16 rounded-full small-icon-green flex items-center justify-center custom-green text-3xl font-bold transition-all duration-300">
                 4
               </div>
             </div>
@@ -147,19 +147,19 @@ export default function ProcessSection() {
                 <h3 className="text-xl font-medium mb-4">What We Do</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-2">
-                    <Check className="text-[#4db5ff] mt-1 h-5 w-5 flex-shrink-0" />
+                    <Check className="custom-green mt-1 h-5 w-5 flex-shrink-0" />
                     <span>24/7 technical support</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Check className="text-[#4db5ff] mt-1 h-5 w-5 flex-shrink-0" />
+                    <Check className="custom-green mt-1 h-5 w-5 flex-shrink-0" />
                     <span>Regular system updates and maintenance</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Check className="text-[#4db5ff] mt-1 h-5 w-5 flex-shrink-0" />
+                    <Check className="custom-green mt-1 h-5 w-5 flex-shrink-0" />
                     <span>Technology roadmap development</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Check className="text-[#4db5ff] mt-1 h-5 w-5 flex-shrink-0" />
+                    <Check className="custom-green mt-1 h-5 w-5 flex-shrink-0" />
                     <span>Strategic business consulting</span>
                   </li>
                 </ul>
