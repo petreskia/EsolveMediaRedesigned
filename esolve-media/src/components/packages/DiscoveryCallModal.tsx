@@ -2,7 +2,15 @@
 
 import { useState } from "react";
 import { X } from "lucide-react";
-import { AdditionalService } from "@/data/pop-up-data";
+import { additionalServices } from "@/data/pop-up-data";
+
+declare global {
+  interface Window {
+    Calendly?: {
+      initPopupWidget: (options: { url: string }) => void;
+    };
+  }
+}
 
 export default function DiscoveryCallModal({
   onClose,
@@ -10,42 +18,6 @@ export default function DiscoveryCallModal({
   onClose: () => void;
 }) {
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
-
-  const additionalServices: AdditionalService[] = [
-    {
-      id: "internal-systems",
-      title:
-        "Would it help to get your internal systems structured and optimized?",
-      description:
-        "We offer custom internal workflow setup - including: Dashboards, content pipelines, client onboarding flows, custom automations, AI agents, collaboration tools and delivery systems with more. Tailored to your business, your needs.",
-    },
-    {
-      id: "ai-outreach",
-      title:
-        "Are you interested in generating leads on autopilot with AI-powered outreach?",
-      description:
-        "We can set up outreach systems including ICP setup, lead sourcing & outreach + follow-ups (up to 5,000/month) – esp. using ChatGPT, Hyperwrite, or combinations of AI tools.",
-    },
-    {
-      id: "reels",
-      title:
-        "Would you benefit from help running high-converting, targeted Reels ad campaigns?",
-      description:
-        "We'll manage your boosted reels for growth - including targeting, A/B testing, copywriting and optimization (ad spend not included).",
-    },
-    {
-      id: "community",
-      title: "Thinking about launching a community or membership platform?",
-      description:
-        "We can help you build a community in your preferred platform – including structure, engagement systems, onboarding flows, and positioning.",
-    },
-    {
-      id: "landing-page",
-      title: "Want a complete full-stack landing page?",
-      description:
-        "Including hosting & domain setup, 3-5 page design, contact form, social links, SEO setup, Google Analytics, Contact form integrated with your CRM, fully branded & custom styled to your brand, integrated with contact form, Instagram API or WhatsApp.",
-    },
-  ];
 
   const handleToggleService = (serviceId: string) => {
     setSelectedServices((prev) =>
@@ -56,14 +28,27 @@ export default function DiscoveryCallModal({
   };
 
   const handleBookCall = () => {
-    // Here you would handle the booking logic
     console.log("Selected services:", selectedServices);
     onClose();
+
+    setTimeout(() => {
+      if (typeof window !== "undefined" && window.Calendly) {
+        window.Calendly.initPopupWidget({
+          url: "https://calendly.com/petreskia997/30min",
+        });
+      } else {
+        console.error("Calendly is not loaded");
+      }
+    }, 300);
   };
 
   return (
     <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
-      <div className="bg-neutral-900 rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+      <div
+        role="dialog"
+        aria-modal="true"
+        className="bg-neutral-900 rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+      >
         <div className="p-6 md:p-8">
           {/* Header */}
           <div className="flex justify-between items-start mb-6">
@@ -71,7 +56,7 @@ export default function DiscoveryCallModal({
             <button
               onClick={onClose}
               className="text-white/70 hover:text-white transition-colors"
-              aria-label="Close"
+              aria-label="Close modal"
             >
               <X size={20} />
             </button>
@@ -82,7 +67,7 @@ export default function DiscoveryCallModal({
             valuable for your business right now?
           </p>
 
-          {/* Additional services checkboxes */}
+          {/* Additional services */}
           <div className="space-y-6 mb-8">
             {additionalServices.map((service) => (
               <div key={service.id} className="flex gap-3">
@@ -110,7 +95,7 @@ export default function DiscoveryCallModal({
             ))}
           </div>
 
-          {/* CTA Button */}
+          {/* CTA */}
           <div className="flex justify-center">
             <button
               onClick={handleBookCall}

@@ -62,8 +62,7 @@ export const personalBrandingPackages: PackageData[] = [
       },
       {
         title: "Growth Dashboard",
-        description:
-          "Comprehensive sales funnel with advanced features and optimization",
+        description: "Personal growth dashboard tracking every key metric",
         quantity: "",
       },
       {
@@ -435,20 +434,19 @@ export const hyperPersonalizedAIPackages: PackageData[] = [
     fees: "$500 system fee",
     features: [
       {
-        title: "Email warm up",
+        title: "Spam folder prohibitor integration",
       },
       {
-        title: "10 000 prospects per month",
+        title: "10 000 qualified prospects/month + A/B testing",
       },
       {
-        title: "500 emails per business day (7 email domains needed)",
+        title: "Email flow + follow up",
       },
       {
-        title: "A/B testing",
+        title: "Professional copywriting",
       },
       {
-        title:
-          "Email/Linkedin/Whatsapp (optional) (8 both for Linkedin & Whatsapp)",
+        title: "Chatbot + CRM integration",
       },
       {
         title: "IG outreach (100)",
