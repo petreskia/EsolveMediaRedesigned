@@ -6,14 +6,14 @@ export const personalBrandingPackages: PackageData[] = [
     id: "build",
     title: "Build",
     subtitle: "Monetization starts here",
-    price: "1850",
+    price: "1995",
     description:
       "For new creators who want to get going with structured & strategic content. Personalized for your avatar, niche & offer",
     features: [
       {
         title: "Strategic session",
         description:
-          "A focused session to assess content, define your value proposition, and outline clear next steps for client monetization—held at the end of each month",
+          "A focused session to assess content, define your value proposition, and outline clear next steps for client monetization",
         quantity: "1x+1x",
       },
       {
@@ -46,12 +46,12 @@ export const personalBrandingPackages: PackageData[] = [
     id: "growth",
     title: "Growth",
     subtitle: "Ready to take it to the next level?",
-    price: "3950",
+    price: "6895",
     features: [
       {
         title: "Strategic session",
         description:
-          "A focused session to assess content, define your value proposition, and outline clear next steps for client monetization.",
+          "Strategic workshop to review, tweak and optimize your monetization journey",
         quantity: "1x+1x",
       },
       {
@@ -190,7 +190,7 @@ export const businessMarketingPackages: PackageData[] = [
     subtitle: "Get your business online – with zero fuss",
     description:
       "For small business owners, shops, service providers or creators who want a sleek, professional presence – without getting lost in tech",
-    price: "949",
+    price: "1095",
     features: [
       {
         title: "Landing Page (One-pager)",
@@ -228,7 +228,7 @@ export const businessMarketingPackages: PackageData[] = [
     subtitle: "From scattered presence to a system that sells",
     description:
       "For small, product-based or service businesses that want to move beyond having a passive online presence and build a simple but powerful digital system that drives action and builds trust",
-    price: "1850",
+    price: "2385",
     features: [
       {
         title: "Full WebPage Design/Redesign",
@@ -253,7 +253,7 @@ export const businessMarketingPackages: PackageData[] = [
         quantity: "",
       },
       {
-        title: "Mini CRM in Notion or Trello",
+        title: "Growth dashboard",
         description:
           "Customized CRM system to manage your customer relationships.",
         quantity: "",
@@ -349,8 +349,8 @@ export const hyperPersonalizedAIPackages: PackageData[] = [
     id: "trial",
     title: "Trial",
     subtitle: "",
-    price: "1395",
-    fees: "$200 system fee",
+    price: "1865",
+    fees: "$255 system fee",
     features: [
       {
         title: "Spam folder prohibitor integration",
@@ -374,8 +374,8 @@ export const hyperPersonalizedAIPackages: PackageData[] = [
     id: "standard",
     title: "Standard",
     subtitle: "",
-    price: "2395",
-    fees: "$200 system fee",
+    price: "3195",
+    fees: "$255 system fee",
     features: [
       {
         title: "Spam folder prohibitor integration",
@@ -399,8 +399,8 @@ export const hyperPersonalizedAIPackages: PackageData[] = [
     id: "premium",
     title: "Premium",
     subtitle: "",
-    price: "3395",
-    fees: "$370 system fee",
+    price: "4545",
+    fees: "$495 system fee",
     features: [
       {
         title: "Spam folder prohibitor integration",
@@ -430,8 +430,8 @@ export const hyperPersonalizedAIPackages: PackageData[] = [
     id: "elite",
     title: "Elite",
     subtitle: "",
-    price: "5495",
-    fees: "$500 system fee",
+    price: "7345",
+    fees: "$655 system fee",
     features: [
       {
         title: "Spam folder prohibitor integration",
