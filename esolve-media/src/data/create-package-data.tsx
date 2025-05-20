@@ -11,13 +11,13 @@ export interface PackageItem {
   selectedChannels?: string[];
 }
 
-export interface PackageCategory {
+export interface CreatePackageCategory {
   id: string;
   name: string;
   packages: PackageItem[];
 }
 
-export const packageData: PackageCategory[] = [
+export const createPackageData: CreatePackageCategory[] = [
   {
     id: "strategy-content",
     name: "Strategy & Content",
@@ -156,6 +156,26 @@ export const packageData: PackageCategory[] = [
           "META/Instagram",
           "WhatsApp",
           "Other channels",
+        ],
+      },
+    ],
+  },
+  {
+    id: "systems-automations",
+    name: "Systems & Automations",
+    packages: [
+      {
+        id: "workflow-optimization-automations",
+        title: "Custom workflow optimization & automations",
+        features: [
+          "Streamlined systems and automations tailored to how you work",
+        ],
+      },
+      {
+        id: "ai-agent",
+        title: "Chat Robot Integration + CRM Integration",
+        features: [
+          "Integrate AI agents to optimize processes and enhance customer interactions",
         ],
       },
     ],

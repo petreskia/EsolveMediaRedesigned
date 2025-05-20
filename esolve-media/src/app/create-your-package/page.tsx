@@ -20,7 +20,7 @@ import {
 import { Badge } from "@/components/create-your-package/ui/badge";
 import { CheckCircle2, ChevronRight, PlusCircle } from "lucide-react";
 import BookingModal from "./booking-modal";
-import { packageData, PackageItem } from "@/data/create-package-data";
+import { createPackageData, PackageItem } from "@/data/create-package-data";
 
 export default function CreateYourPackage() {
   const [selectedPackages, setSelectedPackages] = useState<PackageItem[]>([]);
@@ -87,9 +87,9 @@ export default function CreateYourPackage() {
         </p>
       </div>
 
-      <Tabs defaultValue={packageData[0].id} className="w-full">
-        <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 mb-8">
-          {packageData.map((category) => (
+      <Tabs defaultValue={createPackageData[0].id} className="w-full">
+        <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-15 lg:mb-8">
+          {createPackageData.map((category) => (
             <TabsTrigger
               key={category.id}
               value={category.id}
@@ -100,7 +100,7 @@ export default function CreateYourPackage() {
           ))}
         </TabsList>
 
-        {packageData.map((category) => (
+        {createPackageData.map((category) => (
           <TabsContent
             key={category.id}
             value={category.id}
