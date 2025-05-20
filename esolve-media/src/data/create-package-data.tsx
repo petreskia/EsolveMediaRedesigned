@@ -173,7 +173,7 @@ export const createPackageData: CreatePackageCategory[] = [
       },
       {
         id: "ai-agent",
-        title: "Chat Robot Integration + CRM Integration",
+        title: "AI agents",
         features: [
           "Integrate AI agents to optimize processes and enhance customer interactions",
         ],
