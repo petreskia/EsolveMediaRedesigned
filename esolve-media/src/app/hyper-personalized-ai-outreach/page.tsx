@@ -17,6 +17,7 @@ export default function HyperPersonalizedAIOutreachPage() {
           title="Personal Branding & Marketing for Businesses"
           subtitle=""
           category="hyper-personalized-ai"
+          isStandalonePage={true}
         />
       </main>
     </div>

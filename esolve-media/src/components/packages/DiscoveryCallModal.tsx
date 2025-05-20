@@ -34,7 +34,7 @@ export default function DiscoveryCallModal({
     setTimeout(() => {
       if (typeof window !== "undefined" && window.Calendly) {
         window.Calendly.initPopupWidget({
-          url: "https://calendly.com/petreskia997/30min",
+          url: "https://calendly.com/eskil-esolvemedia/30min",
         });
       } else {
         console.error("Calendly is not loaded");
