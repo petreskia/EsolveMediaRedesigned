@@ -17,7 +17,6 @@ import { Textarea } from "@/components/contact/ui/text-area";
 import { Checkbox } from "@/components/contact/ui/checkbox";
 import Button from "@/components/contact/ui/button";
 import { ArrowRight, Check, Loader2 } from "lucide-react";
-import { sendPortfolioRequest } from "./actions";
 
 // Form schema with validation
 const formSchema = z.object({
@@ -28,10 +27,9 @@ const formSchema = z.object({
     message: "Please specify what type of project you're interested in.",
   }),
   message: z.string().optional(),
-  agreeToTerms: z.literal(true, {
-    errorMap: () => ({
-      message: "You must agree to our terms to request portfolio access.",
-    }),
+  // **FIXED THIS LINE:**
+  agreeToTerms: z.boolean().refine((val) => val === true, {
+    message: "You must agree to our terms to request portfolio access.",
   }),
 });
 
@@ -51,7 +49,7 @@ export default function PortfolioRequestPage() {
       company: "",
       projectType: "",
       message: "",
-      agreeToTerms: true,
+      agreeToTerms: false, // Default to false
     },
   });
 
@@ -59,13 +57,41 @@ export default function PortfolioRequestPage() {
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
     setError(null);
+    setIsSuccess(false); // Reset success state on new submission
 
     try {
-      await sendPortfolioRequest(data);
+      const response = await fetch("/api/portfolio-request", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(
+          errorData.message || "Failed to submit portfolio request"
+        );
+      }
+
       setIsSuccess(true);
-      form.reset();
-    } catch (err) {
-      setError("Something went wrong. Please try again later.");
+      form.reset({ agreeToTerms: false }); // Reset all fields, specifically setting agreeToTerms to false
+      // You don't need the separate form.setValue("agreeToTerms", false); line anymore
+      // if you use form.reset() with a default value.
+      // If you prefer to reset all other fields to their initial default, but specifically set agreeToTerms: false:
+      // form.reset({ ...form.formState.defaultValues, agreeToTerms: false });
+      // But usually just form.reset() will use the initial defaultValues, so setting default to false is key.
+    } catch (err: unknown) {
+      // Changed 'any' to 'unknown' for better TypeScript practice
+      // Improved error handling type
+      if (err instanceof Error) {
+        setError(
+          err.message || "Something went wrong. Please try again later."
+        );
+      } else {
+        setError("An unknown error occurred. Please try again later.");
+      }
       console.error("Error submitting form:", err);
     } finally {
       setIsSubmitting(false);

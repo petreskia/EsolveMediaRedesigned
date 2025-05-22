@@ -77,6 +77,11 @@ export default function CreateYourPackage() {
     return selectedPackages.some((pkg) => pkg.id === packageId);
   };
 
+  const handleModalCloseAndReset = () => {
+    setIsModalOpen(false); // Close the modal
+    setSelectedPackages([]); // Clear all selected packages
+  };
+
   return (
     <div className="container mx-auto py-12 px-4 mt-10 xl:mt-25">
       <div className="text-center mb-12">
@@ -193,7 +198,7 @@ export default function CreateYourPackage() {
 
       <BookingModal
         isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
+        onClose={handleModalCloseAndReset}
         selectedPackages={selectedPackages}
       />
     </div>

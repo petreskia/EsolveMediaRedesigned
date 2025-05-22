@@ -12,7 +12,7 @@ export default function AboutUs() {
   };
 
   return (
-    <div id="about-us-section">
+    <div id="about-us-section" className="about-us-shadow">
       <SectionContainer>
         {/* Header */}
         <SectionHeader

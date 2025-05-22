@@ -1,7 +1,5 @@
 "use client";
 
-import type React from "react";
-
 import { useState } from "react";
 
 import { Button } from "@/components/create-your-package/ui/button";
@@ -42,19 +40,25 @@ export default function BookingModal({
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate API call
     try {
-      // In a real application, you would send this data to your backend
-      console.log({
-        name,
-        email,
-        phone,
-        message,
-        selectedPackages,
+      const response = await fetch("/api/save-services", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          message,
+          selectedPackages,
+          type: "customPackage",
+        }),
       });
 
-      // Simulate delay
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      if (!response.ok) {
+        throw new Error("Failed to submit form");
+      }
 
       setIsSuccess(true);
 
@@ -69,6 +73,7 @@ export default function BookingModal({
       }, 2000);
     } catch (error) {
       console.error("Error submitting form:", error);
+      alert("Something went wrong. Please try again.");
     } finally {
       setIsSubmitting(false);
     }

@@ -18,6 +18,9 @@ export default function DiscoveryCallModal({
   onClose: () => void;
 }) {
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleToggleService = (serviceId: string) => {
     setSelectedServices((prev) =>
@@ -27,19 +30,42 @@ export default function DiscoveryCallModal({
     );
   };
 
-  const handleBookCall = () => {
-    console.log("Selected services:", selectedServices);
-    onClose();
+  const handleBookCall = async () => {
+    if (!email || !name) {
+      alert("Please fill in your name and email.");
+      return;
+    }
 
-    setTimeout(() => {
-      if (typeof window !== "undefined" && window.Calendly) {
-        window.Calendly.initPopupWidget({
-          url: "https://calendly.com/eskil-esolvemedia/30min",
-        });
-      } else {
-        console.error("Calendly is not loaded");
+    setIsSubmitting(true);
+
+    try {
+      const res = await fetch("/api/discovery-call", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, selectedServices }),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to save data.");
       }
-    }, 300);
+
+      onClose();
+
+      setTimeout(() => {
+        if (typeof window !== "undefined" && window.Calendly) {
+          window.Calendly.initPopupWidget({
+            url: "https://calendly.com/eskil-esolvemedia/30min",
+          });
+        } else {
+          console.error("Calendly is not loaded");
+        }
+      }, 300);
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -60,6 +86,24 @@ export default function DiscoveryCallModal({
             >
               <X size={20} />
             </button>
+          </div>
+
+          {/* Name and Email */}
+          <div className="space-y-4 mb-6">
+            <input
+              type="text"
+              placeholder="Your name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="w-full p-3 rounded bg-neutral-800 text-white placeholder-white/60"
+            />
+            <input
+              type="email"
+              placeholder="Your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full p-3 rounded bg-neutral-800 text-white placeholder-white/60"
+            />
           </div>
 
           <p className="text-white/70 mb-8">
@@ -99,9 +143,10 @@ export default function DiscoveryCallModal({
           <div className="flex justify-center">
             <button
               onClick={handleBookCall}
-              className="py-3 px-8 bg-teal-400/80 hover:bg-teal-400 text-black font-medium rounded-full transition-colors"
+              className="py-3 px-8 bg-teal-400/80 hover:bg-teal-400 text-black font-medium rounded-full transition-colors disabled:opacity-50"
+              disabled={isSubmitting}
             >
-              Book a discovery call
+              {isSubmitting ? "Booking..." : "Book a discovery call"}
             </button>
           </div>
         </div>

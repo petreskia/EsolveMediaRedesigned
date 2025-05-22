@@ -47,8 +47,8 @@ export default function Navbar() {
             <Link
               href="/"
               className={cn(
-                "text-white hover:text-emerald-400/60 transition-colors px-3 py-2 text-sm font-medium",
-                isActive("/") && "text-emerald-400" // Apply active class
+                "text-white hover-green transition-colors px-3 py-2 text-sm font-medium",
+                isActive("/") && "custom-green" // Apply active class
               )}
             >
               Home
@@ -56,8 +56,8 @@ export default function Navbar() {
             <Link
               href="/services"
               className={cn(
-                "text-white hover:text-emerald-400/60 transition-colors px-3 py-2 text-sm font-medium",
-                isActive("/services") && "text-emerald-400" // Apply active class
+                "text-white hover-green transition-colors px-3 py-2 text-sm font-medium",
+                isActive("/services") && "custom-green" // Apply active class
               )}
             >
               Services
@@ -65,8 +65,8 @@ export default function Navbar() {
             <Link
               href="/packages"
               className={cn(
-                "text-white hover:text-emerald-400/60 transition-colors px-3 py-2 text-sm font-medium",
-                isActive("/packages") && "text-emerald-400" // Apply active class
+                "text-white hover-green transition-colors px-3 py-2 text-sm font-medium",
+                isActive("/packages") && "custom-green" // Apply active class
               )}
             >
               Packages
@@ -74,8 +74,8 @@ export default function Navbar() {
             <Link
               href="/contact"
               className={cn(
-                "ml-4 inline-flex items-center justify-center whitespace-nowrap rounded-full bg-white px-6 py-2 text-sm font-medium text-black shadow-sm transition-colors hover:bg-gray-200",
-                isActive("/contact") && "bg-emerald-200 text-black" // Apply active class
+                "ml-4 inline-flex items-center justify-center whitespace-nowrap rounded-full bg-white px-6 py-2 text-sm font-medium text-black shadow-sm transition-colors hover-bg-green",
+                isActive("/contact") && "bg-green text-black" // Apply active class
               )}
             >
               Contact

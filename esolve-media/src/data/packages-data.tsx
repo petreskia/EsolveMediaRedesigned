@@ -84,7 +84,8 @@ export const personalBrandingPackages: PackageData[] = [
       },
       {
         title: "1:1 workshop session (45 min)",
-        description: "Professional landing page optimized for conversions",
+        description:
+          "For new creators who want to get going with structured & strategic content. Personalized for your avatar, niche & offer. Includes access to a 1x strategy session on your schedule, personalized analytics review, priority support, growth tips, and exclusive premium service discounts.",
         quantity: "1x",
       },
       {

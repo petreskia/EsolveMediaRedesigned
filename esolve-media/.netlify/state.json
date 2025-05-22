@@ -1,0 +1,20 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "Kočevje",
+			"country": {
+				"code": "SI",
+				"name": "Slovenia"
+			},
+			"subdivision": {
+				"code": "048",
+				"name": "Občina Kočevje"
+			},
+			"timezone": "Europe/Ljubljana",
+			"latitude": 45.6394,
+			"longitude": 14.8622,
+			"postalCode": "1330"
+		},
+		"timestamp": 1746742563004
+	}
+}

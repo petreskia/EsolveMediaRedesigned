@@ -10,7 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/contact/ui/accordion";
-import Button from "@/components/contact/ui/button";
+import Button from "@/components/contact/ui/button"; // Assuming this is your custom Button component
 import {
   Form,
   FormControl,
@@ -47,7 +47,7 @@ import {
 import type { PackageData } from "@/types/package-types";
 import SectionHeader from "@/components/layouts/SectionHeader";
 
-// Combine all services for easier access
+// Combine all services for easier access (used for client-side display)
 const allServices = [
   ...webDesignServices,
   ...graphicDesignServices,
@@ -64,7 +64,7 @@ const formSchema = z.object({
   company: z.string().optional(),
   message: z.string().optional(),
   budget: z.enum(["under-1k", "1k-5k", "5k-10k", "10k-plus", "not-sure"]),
-  services: z.array(z.string()).optional(),
+  services: z.array(z.string()).optional(), // Array of service IDs
   packageType: z
     .enum(["personal-branding", "business-marketing", "ai-outreach", "none"])
     .optional(),
@@ -80,6 +80,8 @@ export default function ContactPage() {
     null
   );
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
+  const [isSubmitting, setIsSubmitting] = useState(false); // Add submitting state
+  const [submitMessage, setSubmitMessage] = useState<string | null>(null); // To show success/error message
 
   // Initialize form
   const form = useForm<FormValues>({
@@ -92,16 +94,49 @@ export default function ContactPage() {
       message: "",
       budget: "not-sure",
       services: [],
-      packageType: "personal-branding",
-      packageId: undefined,
+      packageType: "personal-branding", // Default selected package type
+      packageId: undefined, // Default no package selected
     },
   });
 
   // Handle form submission
-  const onSubmit = (data: FormValues) => {
-    console.log("Form submitted:", data);
-    // Here you would typically send the data to your backend
-    alert("Form submitted successfully! Check console for details.");
+  const onSubmit = async (data: FormValues) => {
+    setIsSubmitting(true);
+    setSubmitMessage(null); // Clear previous messages
+
+    try {
+      const response = await fetch("/api/contact", {
+        // <--- Changed endpoint
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data), // Send the entire form data
+      });
+
+      if (!response.ok) {
+        // Attempt to read error message from response body
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Failed to submit contact form");
+      }
+
+      setSubmitMessage(
+        "Your message has been sent successfully! We'll get back to you shortly."
+      );
+      form.reset(); // Reset the form fields
+      setSelectedServices([]); // Clear selected services
+      setSelectedPackageId(null); // Clear selected package
+      setSelectedPackageType("personal-branding"); // Reset package type tab to default
+    } catch (error: unknown) {
+      console.error("Error submitting contact form:", error);
+      let errorMessage = "Something went wrong. Please try again.";
+      if (error instanceof Error) {
+        errorMessage = error.message;
+      }
+      setSubmitMessage(`Error: ${errorMessage}`);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   // Handle service selection
@@ -503,10 +538,23 @@ export default function ContactPage() {
             {/* Submit Button */}
             <Button
               type="submit"
-              className="w-full md:w-auto bg-teal-400 hover:bg-teal-500 text-black"
+              className="w-full md:w-auto bg-white hover-bg-green text-black cursor-pointer"
+              disabled={isSubmitting} // Disable button during submission
             >
-              Send Message
+              {isSubmitting ? "Sending..." : "Send Message"}
             </Button>
+
+            {submitMessage && (
+              <p
+                className={`mt-4 text-center ${
+                  submitMessage.startsWith("Error:")
+                    ? "text-red-500"
+                    : "custom-green"
+                }`}
+              >
+                {submitMessage}
+              </p>
+            )}
           </form>
         </Form>
       </div>
